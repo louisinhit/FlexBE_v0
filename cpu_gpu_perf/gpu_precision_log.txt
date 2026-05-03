@@ -1,0 +1,708 @@
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 1
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 1
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00620222 s
+  throughput  : 161.2325 samples/s
+  timings[:10]: [0.007263232231140137, 0.007201759815216064, 0.007195648193359375, 0.007205056190490723, 0.007165952205657959, 0.007171072006225586, 0.007158783912658692, 0.007168000221252442, 0.00717523193359375, 0.007159808158874512] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 1
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00468321 s
+  throughput  : 213.5289 samples/s
+  timings[:10]: [0.004701183795928955, 0.004722432136535644, 0.004671487808227539, 0.004681727886199951, 0.004666175842285156, 0.00466431999206543, 0.004684800148010254, 0.004670464038848877, 0.004685823917388916, 0.004754432201385498] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00620222 s, throughput=161.2325 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00468321 s, throughput=213.5289 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 2
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 2
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00343562 s
+  throughput  : 582.1365 samples/s
+  timings[:10]: [0.003482624053955078, 0.003585024118423462, 0.003479327917098999, 0.00344870400428772, 0.003424031972885132, 0.003546112060546875, 0.003428352117538452, 0.003408895969390869, 0.0034263041019439696, 0.0036659200191497803] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 2
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00356815 s
+  throughput  : 560.5151 samples/s
+  timings[:10]: [0.0034734079837799073, 0.00364851188659668, 0.0035458879470825194, 0.003564543962478638, 0.003535871982574463, 0.0035870718955993653, 0.003482624053955078, 0.003571712017059326, 0.0035049281120300294, 0.003473344087600708] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00343562 s, throughput=582.1365 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00356815 s, throughput=560.5151 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 4
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 4
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00342461 s
+  throughput  : 1168.0147 samples/s
+  timings[:10]: [0.003673088073730469, 0.0034640638828277587, 0.003438591957092285, 0.0034509758949279783, 0.0034364800453186035, 0.003427328109741211, 0.0034263041019439696, 0.0034775040149688722, 0.003411967992782593, 0.003412992000579834] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 4
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00356472 s
+  throughput  : 1122.1077 samples/s
+  timings[:10]: [0.003467168092727661, 0.003603327989578247, 0.0035162880420684813, 0.00355020809173584, 0.0034875199794769285, 0.0034457600116729738, 0.003492863893508911, 0.003457024097442627, 0.0034887681007385253, 0.003468287944793701] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00342461 s, throughput=1168.0147 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00356472 s, throughput=1122.1077 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 6
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 6
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00352638 s
+  throughput  : 1701.4603 samples/s
+  timings[:10]: [0.0036864960193634033, 0.0035592639446258545, 0.0036833279132843016, 0.00356659197807312, 0.0035246078968048096, 0.0035359680652618406, 0.0035297279357910157, 0.003588223934173584, 0.0035932159423828127, 0.0035315840244293214] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 6
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00363746 s
+  throughput  : 1649.5018 samples/s
+  timings[:10]: [0.003536672115325928, 0.0036720640659332277, 0.0036331520080566406, 0.0035624959468841554, 0.0035880959033966066, 0.0035696640014648436, 0.0035338239669799806, 0.003532927989959717, 0.0035399680137634276, 0.0035440640449523925] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00352638 s, throughput=1701.4603 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00363746 s, throughput=1649.5018 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 8
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 8
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00349500 s
+  throughput  : 2288.9875 samples/s
+  timings[:10]: [0.003554176092147827, 0.0037099840641021727, 0.003494879961013794, 0.0034782719612121583, 0.0036526079177856443, 0.003468287944793701, 0.003482624053955078, 0.003476480007171631, 0.003506175994873047, 0.003463072061538696] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 8
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00360191 s
+  throughput  : 2221.0456 samples/s
+  timings[:10]: [0.0035276799201965333, 0.0037839040756225584, 0.003579807996749878, 0.0035493121147155762, 0.0035583040714263917, 0.003522559881210327, 0.003525696039199829, 0.0035162560939788817, 0.0035532801151275635, 0.0035121600627899168] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00349500 s, throughput=2288.9875 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00360191 s, throughput=2221.0456 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 10
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 10
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00347032 s
+  throughput  : 2881.5801 samples/s
+  timings[:10]: [0.003547039985656738, 0.003680255889892578, 0.003478624105453491, 0.0034795520305633547, 0.0034774720668792726, 0.003458048105239868, 0.0034530560970306395, 0.0034498560428619387, 0.003453952074050903, 0.003438591957092285] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 10
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00359116 s
+  throughput  : 2784.6186 samples/s
+  timings[:10]: [0.003496959924697876, 0.003668992042541504, 0.00353273606300354, 0.0035686399936676024, 0.0035605759620666506, 0.003490976095199585, 0.003499903917312622, 0.0034950079917907715, 0.0036207358837127687, 0.0035081601142883303] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00347032 s, throughput=2881.5801 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00359116 s, throughput=2784.6186 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 1
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 1
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00347426 s
+  throughput  : 287.8313 samples/s
+  timings[:10]: [0.003567615985870361, 0.003586047887802124, 0.003505151987075806, 0.0035112960338592528, 0.0034671039581298828, 0.0034590399265289305, 0.0034663360118865967, 0.0034693119525909424, 0.00347545599937439, 0.0034651520252227783] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 1
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00360552 s
+  throughput  : 277.3525 samples/s
+  timings[:10]: [0.0035399680137634276, 0.0036794559955596923, 0.0036116480827331544, 0.003589119911193848, 0.00355948805809021, 0.003522559881210327, 0.0037180800437927246, 0.0036782081127166746, 0.0036874239444732665, 0.0036177918910980226] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00347426 s, throughput=287.8313 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00360552 s, throughput=277.3525 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 2
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 2
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00349173 s
+  throughput  : 572.7815 samples/s
+  timings[:10]: [0.003547136068344116, 0.0035327999591827394, 0.0036423039436340333, 0.0035389440059661863, 0.0035274879932403564, 0.0035043199062347414, 0.0035174400806427, 0.0035000319480895997, 0.003512320041656494, 0.003482399940490723] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 2
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00361570 s
+  throughput  : 553.1427 samples/s
+  timings[:10]: [0.0035215680599212647, 0.00369868803024292, 0.0035523200035095215, 0.003575808048248291, 0.00353769588470459, 0.0035235838890075684, 0.003853312015533447, 0.003499840021133423, 0.0035102720260620115, 0.0036206719875335695] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00349173 s, throughput=572.7815 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00361570 s, throughput=553.1427 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 4
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 4
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00349092 s
+  throughput  : 1145.8291 samples/s
+  timings[:10]: [0.003505151987075806, 0.004830207824707031, 0.004500480175018311, 0.0034775040149688722, 0.003461087942123413, 0.0034757120609283446, 0.0034641919136047363, 0.0034456961154937745, 0.003458048105239868, 0.0034672000408172607] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 4
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00356471 s
+  throughput  : 1122.1096 samples/s
+  timings[:10]: [0.003469248056411743, 0.0036217279434204103, 0.003570784091949463, 0.0035738561153411865, 0.003490623950958252, 0.0035194880962371826, 0.0034744319915771486, 0.00347545599937439, 0.003503999948501587, 0.003480544090270996] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00349092 s, throughput=1145.8291 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00356471 s, throughput=1122.1096 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 6
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 6
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00348699 s
+  throughput  : 1720.6819 samples/s
+  timings[:10]: [0.0035573759078979493, 0.0037160959243774413, 0.0035182719230651854, 0.0034805760383605955, 0.0034940800666809083, 0.003476480007171631, 0.0034746561050415037, 0.0034734079837799073, 0.003468224048614502, 0.0034908161163330078] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 6
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00358446 s
+  throughput  : 1673.8901 samples/s
+  timings[:10]: [0.003534015893936157, 0.0036882240772247313, 0.003586047887802124, 0.003580928087234497, 0.003535871982574463, 0.0035942399501800535, 0.0035082240104675295, 0.0035031039714813234, 0.003571712017059326, 0.0035050239562988282] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00348699 s, throughput=1720.6819 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00358446 s, throughput=1673.8901 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 8
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 8
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00347576 s
+  throughput  : 2301.6522 samples/s
+  timings[:10]: [0.0035430400371551513, 0.0034926400184631346, 0.0034979839324951172, 0.003483423948287964, 0.003555423974990845, 0.003636415958404541, 0.0034726080894470217, 0.0034652481079101563, 0.003483680009841919, 0.003452928066253662] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 8
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00357927 s
+  throughput  : 2235.0909 samples/s
+  timings[:10]: [0.0035082240104675295, 0.0036894400119781494, 0.003505151987075806, 0.003555327892303467, 0.0035246078968048096, 0.0034990079402923585, 0.003512320041656494, 0.0034919040203094482, 0.0035522561073303223, 0.0035450880527496337] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00347576 s, throughput=2301.6522 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00357927 s, throughput=2235.0909 samples/s
+
+================================================================================
+Strict GPU precision benchmark without autocast
+batch_size              : 10
+device                  : cuda:2
+gpu name                : NVIDIA GeForce RTX 3090
+TF32 matmul allowed     : False
+TF32 cudnn allowed      : False
+================================================================================
+
+----------------------------------------------------------------------
+Running case: GPU_FP16_all_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 10
+Model dtype : torch.float16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16_all_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] GPU_FP16_all_strict
+  avg latency : 0.00351596 s
+  throughput  : 2844.1709 samples/s
+  timings[:10]: [0.0035481600761413574, 0.0036669440269470215, 0.0036557440757751464, 0.0035174400806427, 0.003526655912399292, 0.003512320041656494, 0.0034959359169006348, 0.0036126720905303956, 0.0034937920570373535, 0.003506175994873047] ...
+
+----------------------------------------------------------------------
+Running case: GPU_FP16FFT_BF16NN_strict
+Device      : cuda:2
+GPU name    : NVIDIA GeForce RTX 3090
+Batch size  : 10
+Model dtype : torch.bfloat16
+----------------------------------------------------------------------
+[DTYPE PROBE] GPU_FP16FFT_BF16NN_strict
+  input_dtype           : torch.complex32
+  input_real_dtype      : torch.float16
+  fft_inputs_dtype      : torch.complex32
+  fft_outputs_dtype     : torch.complex32
+  abs_output_dtype      : torch.float16
+  nn_input_dtype        : torch.bfloat16
+  lin_0_weight_dtype    : torch.bfloat16
+  lin_0_bias_dtype      : torch.bfloat16
+  output_0_dtype        : torch.bfloat16
+
+[OK] GPU_FP16FFT_BF16NN_strict
+  avg latency : 0.00360161 s
+  throughput  : 2776.5353 samples/s
+  timings[:10]: [0.003522559881210327, 0.003680255889892578, 0.003586047887802124, 0.0035921919345855715, 0.0035449280738830565, 0.0035350399017333983, 0.003534847974777222, 0.0035338239669799806, 0.003555327892303467, 0.003516223907470703] ...
+
+================ SUMMARY ================ 
+GPU_FP16_all_strict: latency=0.00351596 s, throughput=2844.1709 samples/s
+GPU_FP16FFT_BF16NN_strict: latency=0.00360161 s, throughput=2776.5353 samples/s
