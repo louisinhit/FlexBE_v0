@@ -1,0 +1,655 @@
+____________________________________________________________________
+			P o w e r T O P
+
+____________________________________________________________________
+ *  *  *   System Information   *  *  *
+
+PowerTOP Version;v2.11-1-g7ef7f79 ran at Tue Jan 13 19:50:24 2026
+
+Kernel Version;Linux version 5.15.0-134-generic
+System Name;ASUSTeK COMPUTER INC.ROG STRIX Z390-E GAMINGSystem Version
+CPU Information;16 Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+OS Information;Ubuntu 20.04.3 LTS
+
+Target: 1 units/s;System:  432.4 wakeup/s;CPU:  757.2% usage;GPU: 0 ops/s;GFX: 0 wakeups/s;VFS: 0 ops/s;
+
+____________________________________________________________________
+ *  *  *   Top 10 Power Consumers   *  *  *
+
+Usage;Events/s;Category;Description;PW Estimate
+  751%;  3.2;Process;[PID 1822884] python3 torch_fxp16_bfly_nn.py --batch 6 ;  11.7 W  
+  1.1%;228.6;Timer;tick_sched_timer;  921 mW  
+  0.1%; 39.5;Process;[PID 1815944] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  158 mW  
+  0.0%; 21.2;Process;[PID 14] [rcu_sched]; 83.9 mW  
+  0.1%; 19.7;Process;[PID 1815941] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 79.1 mW  
+  0.1%; 19.6;Process;[PID 1816806] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 78.5 mW  
+  0.1%; 19.4;Process;[PID 1816706] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 77.9 mW  
+  0.0%; 13.8;Process;[PID 1816071] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 55.0 mW  
+  0.1%;  7.5;Process;[PID 1815846] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 30.7 mW  
+  0.1%;  7.3;Interrupt;[3] net_rx(softirq); 30.0 mW  
+
+____________________________________________________________________
+ *  *  *   Processor Idle State Report   *  *  *
+
+Package;0
+C2 (pc2);  0.0%
+C3 (pc3);  0.0%
+C6 (pc6);  0.0%
+C7 (pc7);  0.0%
+C8 (pc8);  0.0%
+C9 (pc9);  0.0%
+C10 (pc10);  0.0%
+;
+;
+;
+
+;Core 0
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  6.0%
+;Core 1
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  6.1%
+;Core 2
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  6.0%
+;Core 3
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  4.4%
+;Core 4
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  6.1%
+;Core 5
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  5.9%
+;Core 6
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  6.0%
+;Core 7
+C3 (cc3);  0.0%
+C6 (cc6);  0.0%
+C7 (cc7);  2.5%
+
+CPU;0;CPU;8
+C0 active; 34.4%; 60.5%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.3 ms;  0.0%;   0.0 ms
+;
+C3;  0.0%;   0.3 ms;  0.0%;   0.1 ms
+C6;  0.1%;   0.4 ms;  0.0%;   0.3 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8; 31.7%;   3.8 ms;  2.2%;   3.6 ms
+C9;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C10; 33.9%;   4.2 ms; 37.5%;  64.7 ms
+C1E;  0.1%;   1.1 ms;  0.0%;   0.1 ms
+CPU;1;CPU;9
+C0 active; 50.1%; 44.5%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.5 ms;  0.0%;   0.3 ms
+;
+C3;  0.0%;   0.2 ms;  0.0%;   0.1 ms
+C6;  0.2%;   0.6 ms;  0.0%;   0.6 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  9.3%;   3.6 ms;  2.3%;   3.2 ms
+C9;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C10; 40.6%;   8.3 ms; 53.4%;  33.3 ms
+C1E;  0.0%;   0.1 ms;  0.0%;   0.1 ms
+CPU;2;CPU;10
+C0 active; 29.0%; 66.3%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.1 ms;  0.0%;   0.8 ms
+;
+C3;  0.0%;   0.2 ms;  0.0%;   0.2 ms
+C6;  0.1%;   0.8 ms;  0.1%;   0.6 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  8.7%;   3.6 ms;  3.2%;   2.8 ms
+C9;  0.0%;   0.0 ms;  0.3%;   7.9 ms
+;
+C10; 62.3%;  35.8 ms; 30.3%;  26.5 ms
+C1E;  0.0%;   0.1 ms;  0.0%;   0.0 ms
+CPU;3;CPU;11
+C0 active; 55.5%; 42.5%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.0 ms;  0.0%;   0.7 ms
+;
+C3;  0.0%;   0.3 ms;  0.1%;   0.3 ms
+C6;  0.0%;   0.3 ms;  0.2%;   0.5 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  3.3%;   2.9 ms;  4.2%;   2.3 ms
+C9;  0.1%;   4.8 ms;  0.0%;   0.8 ms
+;
+C10; 41.3%;  15.4 ms; 53.6%;  26.4 ms
+C1E;  0.1%;   0.9 ms;  0.0%;   0.4 ms
+CPU;4;CPU;12
+C0 active; 89.2%;  5.8%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.5 ms;  0.0%;   0.0 ms
+;
+C3;  0.0%;   0.0 ms;  0.0%;   0.2 ms
+C6;  0.0%;   0.7 ms;  0.1%;   0.5 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   1.4 ms
+C8;  1.2%;   3.2 ms;  7.5%;   3.3 ms
+C9;  0.0%;   0.0 ms;  0.1%;   5.5 ms
+;
+C10;  9.9%;  54.9 ms; 86.4%;  26.8 ms
+C1E;  0.0%;   0.0 ms;  0.1%;   1.6 ms
+CPU;5;CPU;13
+C0 active; 10.3%; 84.2%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C3;  0.0%;   0.2 ms;  0.0%;   0.0 ms
+C6;  0.0%;   0.4 ms;  0.0%;   1.1 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  8.7%;   3.4 ms;  1.1%;   3.2 ms
+C9;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C10; 80.8%;  61.4 ms; 14.8%;  55.8 ms
+C1E;  0.2%;   1.3 ms;  0.1%;   2.5 ms
+CPU;6;CPU;14
+C0 active; 41.1%; 53.4%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C3;  0.0%;   0.2 ms;  0.0%;   0.2 ms
+C6;  0.2%;   0.6 ms;  0.1%;   0.6 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  3.0%;   2.7 ms;  2.9%;   2.6 ms
+C9;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C10; 55.9%;  40.4 ms; 43.7%;  33.1 ms
+C1E;  0.0%;   0.1 ms;  0.0%;   0.5 ms
+CPU;7;CPU;15
+C0 active; 37.0%; 62.2%;
+POLL;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C1;  0.0%;   1.1 ms;  0.0%;   0.0 ms
+;
+C3;  0.0%;   0.2 ms;  0.0%;   0.0 ms
+C6;  0.0%;   0.4 ms;  0.0%;   0.4 ms
+C7s;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+C8;  1.0%;   2.8 ms;  1.3%;   3.3 ms
+C9;  0.0%;   0.0 ms;  0.0%;   0.0 ms
+;
+C10; 62.1%;  45.3 ms; 37.8%;  46.5 ms
+C1E;  0.1%;   1.0 ms;  0.0%;   1.1 ms
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+
+____________________________________________________________________
+ *  *  *   Processor Frequency Report   *  *  *
+
+Package;0
+Idle;
+;
+;
+;
+
+;Core 0
+Idle;
+;Core 1
+Idle;
+;Core 2
+Idle;
+;Core 3
+Idle;
+;Core 4
+Idle;
+;Core 5
+Idle;
+;Core 6
+Idle;
+;Core 7
+Idle;
+
+CPU 0;CPU 8
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 1;CPU 9
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 2;CPU 10
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 3;CPU 11
+Average;3.6 GHz;3.7 GHz
+Idle;
+CPU 4;CPU 12
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 5;CPU 13
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 6;CPU 14
+Average;3.6 GHz;3.6 GHz
+Idle;
+CPU 7;CPU 15
+Average;3.6 GHz;3.7 GHz
+Idle;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+
+____________________________________________________________________
+ *  *  *   Overview of Software Power Consumers   *  *  *
+
+Usage;Wakeups/s;GPU ops/s;Disk IO/s;GFX Wakeups/s;Category;Description;PW Estimate
+ 7516 ms/s;  3.2;;;;Process;[PID 1822884] python3 torch_fxp16_bfly_nn.py --batch 6 ;  11.7 W  
+ 11.2 ms/s;228.6;;;;Timer;tick_sched_timer;  921 mW  
+  1.3 ms/s; 39.5;;;;Process;[PID 1815944] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  158 mW  
+188.6 us/s; 21.2;;;;Process;[PID 14] [rcu_sched]; 83.9 mW  
+  0.9 ms/s; 19.7;;;;Process;[PID 1815941] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 79.1 mW  
+641.7 us/s; 19.6;;;;Process;[PID 1816806] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 78.5 mW  
+  0.8 ms/s; 19.4;;;;Process;[PID 1816706] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 77.9 mW  
+393.6 us/s; 13.8;;;;Process;[PID 1816071] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 55.0 mW  
+620.7 us/s;  7.5;;;;Process;[PID 1815846] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 30.7 mW  
+  0.8 ms/s;  7.3;;;;Interrupt;[3] net_rx(softirq); 30.0 mW  
+ 75.0 us/s;  6.9;;;;kWork;psi_avgs_work; 27.5 mW  
+ 46.2 us/s;  6.6;;;;kWork;free_work; 26.1 mW  
+  9.8 ms/s;;;;;Process;[PID 1815544] sshd: userr@pts/0 ; 15.3 mW  
+ 84.9 us/s;  3.8;;;;Process;[PID 1815827] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 15.3 mW  
+117.0 us/s;  3.4;;;;Process;[PID 1815819] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 13.8 mW  
+  7.9 ms/s; 0.05;;;;Process;[PID 1815849] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 12.6 mW  
+260.5 us/s;  2.5;;;;Process;[PID 1815842] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 10.3 mW  
+ 22.6 us/s;  2.4;;;;Timer;watchdog_timer_fn; 9.50 mW  
+173.1 us/s;  1.8;;;;Process;[PID 1815865] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 7.56 mW  
+ 95.7 us/s;  1.8;;;;Process;[PID 1815940] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 7.25 mW  
+133.5 us/s;  1.7;;;;Process;[PID 1] /sbin/init splash ; 6.91 mW  
+  3.3 ms/s;  0.4;;;;Process;[PID 1816096] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 6.91 mW  
+ 16.2 us/s;  1.5;;;;Process;[PID 115] [kcompactd0]; 6.14 mW  
+127.7 us/s;  1.4;;;;kWork;handle_update; 5.72 mW  
+  3.6 ms/s;;;;;Interrupt;[7] sched(softirq); 5.68 mW  
+ 12.0 us/s;  1.3;;;;Process;[PID 13] [ksoftirqd/0]; 5.34 mW  
+443.6 us/s;  1.1;;;;Process;[PID 1822843] powertop --csv=power_log_batch6.csv ; 5.03 mW  
+ 34.0 us/s;  0.8;;;;Process;[PID 1815822] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 3.40 mW  
+ 22.1 us/s;  0.8;;;;Process;[PID 1815820] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 3.19 mW  
+ 19.9 us/s;  0.7;;;;Process;[PID 1430] /usr/libexec/gvfs-afc-volume-monitor ; 2.99 mW  
+ 17.7 us/s;  0.7;;;;kWork;vmstat_shepherd; 2.79 mW  
+ 15.8 us/s;  0.7;;;;kWork;pci_pme_list_scan; 2.78 mW  
+ 52.1 us/s;  0.6;;;;Process;[PID 1815920] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 2.64 mW  
+  0.8 ms/s;  0.3;;;;Process;[PID 1816117] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 2.60 mW  
+ 15.7 us/s;  0.6;;;;Process;[PID 1815379] /usr/libexec/gvfs-afc-volume-monitor ; 2.59 mW  
+  1.7 us/s;  0.6;;;;kWork;flush_to_ldisc; 2.37 mW  
+  1.5 ms/s;;;;;Timer;hrtimer_wakeup; 2.34 mW  
+  1.1 ms/s; 0.10;;;;Process;[PID 1821765] bash -c while true; do sleep 1;head -v -n 8 /proc/meminfo; head -v -n 2 /proc/stat /proc/version /proc/uptime /pr; 2.19 mW  
+158.8 us/s;  0.4;;;;kWork;flush_memcg_stats_dwork; 2.02 mW  
+  7.6 us/s;  0.5;;;;Process;[PID 1332845] /usr/lib/snapd/snapd ; 1.98 mW  
+  3.2 us/s;  0.4;;;;kWork;blk_mq_requeue_work; 1.78 mW  
+ 82.9 us/s;  0.4;;;;Process;[PID 1074] avahi-daemon: running [dust.local] ; 1.71 mW  
+ 12.8 us/s;  0.3;;;;kWork;wb_workfn; 1.40 mW  
+ 11.8 us/s;  0.3;;;;Process;[PID 1815815] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ; 1.40 mW  
+629.1 us/s; 0.05;;;;Process;[PID 1821654] sshd: userr@pts/1 ; 1.18 mW  
+  9.7 us/s; 0.25;;;;Interrupt;[4] block(softirq); 1.00 mW  
+493.1 us/s; 0.05;;;;Interrupt;[9] RCU(softirq);  966 uW  
+ 33.1 us/s; 0.20;;;;kWork;e1000_watchdog_task;  840 uW  
+ 32.6 us/s; 0.20;;;;Process;[PID 1264] /usr/sbin/thermald --systemd --dbus-enable --adaptive ;  839 uW  
+ 13.3 us/s; 0.20;;;;Process;[PID 1582] /usr/bin/gnome-shell ;  809 uW  
+  1.4 us/s; 0.20;;;;Process;[PID 22] [ksoftirqd/1];  791 uW  
+  0.6 us/s; 0.20;;;;kWork;blk_mq_timeout_work;  789 uW  
+ 17.5 us/s; 0.15;;;;Process;[PID 1816111] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  619 uW  
+ 14.2 us/s; 0.15;;;;Process;[PID 1815919] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  614 uW  
+ 13.4 us/s; 0.15;;;;Process;[PID 1257] /usr/sbin/NetworkManager --no-daemon ;  612 uW  
+ 10.5 us/s; 0.15;;;;Process;[PID 1815821] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  608 uW  
+  9.6 us/s; 0.15;;;;Process;[PID 1078] /usr/lib/accountsservice/accounts-daemon ;  606 uW  
+  0.2 us/s; 0.15;;;;kWork;wb_update_bandwidth_workfn;  592 uW  
+169.1 us/s; 0.05;;;;Process;[PID 1815828] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  461 uW  
+ 16.9 us/s; 0.10;;;;Process;[PID 1816113] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  421 uW  
+213.3 us/s;;;;;Interrupt;[1] timer(softirq);  333 uW  
+208.0 us/s;;;;;Timer;nv_timer_callback_typed_data;  324 uW  
+ 73.3 us/s; 0.05;;;;Process;[PID 1822946] bash;  312 uW  
+ 68.8 us/s; 0.05;;;;Process;[PID 1823028] bash;  304 uW  
+ 66.0 us/s; 0.05;;;;Process;[PID 1815885] /home/userr/vivado_24/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado ;  300 uW  
+ 65.1 us/s; 0.05;;;;Process;[PID 1823024] bash;  299 uW  
+ 64.9 us/s; 0.05;;;;Process;[PID 1822924] bash;  298 uW  
+ 63.8 us/s; 0.05;;;;Process;[PID 1822917] bash;  297 uW  
+ 63.4 us/s; 0.05;;;;Process;[PID 1822974] bash;  296 uW  
+ 62.5 us/s; 0.05;;;;Process;[PID 1822903] bash;  295 uW  
+ 61.5 us/s; 0.05;;;;Process;[PID 1823010] bash;  293 uW  
+ 59.6 us/s; 0.05;;;;Process;[PID 1823031] bash;  290 uW  
+ 58.3 us/s; 0.05;;;;Process;[PID 1822995] bash;  288 uW  
+ 57.4 us/s; 0.05;;;;Process;[PID 1822988] bash;  287 uW  
+ 57.1 us/s; 0.05;;;;Process;[PID 1822967] bash;  286 uW  
+ 56.7 us/s; 0.05;;;;Process;[PID 1823002] bash;  286 uW  
+ 56.7 us/s; 0.05;;;;Process;[PID 1822939] bash;  286 uW  
+ 56.1 us/s; 0.05;;;;Process;[PID 1822992] bash;  285 uW  
+ 55.4 us/s; 0.05;;;;Process;[PID 1822910] bash;  284 uW  
+ 53.5 us/s; 0.05;;;;Process;[PID 1822931] bash;  281 uW  
+ 50.2 us/s; 0.05;;;;Process;[PID 1089] /usr/sbin/irqbalance --foreground ;  275 uW  
+ 49.9 us/s; 0.05;;;;Process;[PID 1822915] bash;  275 uW  
+ 48.6 us/s; 0.05;;;;Process;[PID 1822953] bash;  273 uW  
+ 46.5 us/s; 0.05;;;;Process;[PID 1822981] bash;  270 uW  
+ 45.9 us/s; 0.05;;;;Process;[PID 1823017] bash;  269 uW  
+ 45.8 us/s; 0.05;;;;Process;[PID 1822960] bash;  269 uW  
+ 44.2 us/s; 0.05;;;;Process;[PID 1823032] bash;  266 uW  
+169.2 us/s;;;;;Interrupt;[130] eno2;  264 uW  
+ 41.7 us/s; 0.05;;;;Process;[PID 1822978] bash;  262 uW  
+ 41.1 us/s; 0.05;;;;Process;[PID 1822900] bash;  261 uW  
+ 40.7 us/s; 0.05;;;;Process;[PID 1822914] bash;  261 uW  
+ 39.6 us/s; 0.05;;;;Process;[PID 1822985] bash;  259 uW  
+ 37.8 us/s; 0.05;;;;Process;[PID 1822916] bash;  256 uW  
+ 36.6 us/s; 0.05;;;;Process;[PID 1822948] bash;  254 uW  
+ 35.8 us/s; 0.05;;;;Process;[PID 1822983] bash;  253 uW  
+161.2 us/s;;;;;Timer;delayed_work_timer_fn;  251 uW  
+ 34.4 us/s; 0.05;;;;Process;[PID 1822962] bash;  251 uW  
+ 32.9 us/s; 0.05;;;;Process;[PID 1822889] bash;  248 uW  
+ 32.5 us/s; 0.05;;;;Process;[PID 1823019] bash;  248 uW  
+ 32.0 us/s; 0.05;;;;Process;[PID 1822969] bash;  247 uW  
+
+
+The system baseline power is estimated at:  53.1  W;
+____________________________________________________________________
+ *  *  *   Device Power Report   *  *  *
+
+Usage;Device Name;PW Estimate
+757.3%;CPU core;  39.6 W   
+757.3%;CPU misc;  9.61 W   
+757.3%;DRAM;  3.91 W   
+111.8 pkts/s;Network interface: eno2 (e1000e);           
+100.0%;Radio device: iwlwifi;           
+100.0%;Radio device: btusb;           
+100.0%;PCI Device: NVIDIA Corporation TU102 High Definition Audio Controller;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH PCI Express Root Port #9;           
+100.0%;PCI Device: Intel Corporation SSD 660P Series;           
+100.0%;PCI Device: Intel Corporation Ethernet Connection (7) I219-V;           
+100.0%;PCI Device: Intel Corporation 8th Gen Core 8-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S];           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH PCI Express Root Port #17;           
+100.0%;PCI Device: Intel Corporation SSD 660P Series;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH Shared SRAM;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH SPI Controller;           
+100.0%;PCI Device: Intel Corporation Z390 Chipset LPC/eSPI Controller;           
+100.0%;PCI Device: Intel Corporation Cannon Lake PCH PCI Express Root Port #21;           
+100.0%;PCI Device: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16);           
+100.0%;PCI Device: Intel Corporation Wireless-AC 9560 [Jefferson Peak];           
+100.0%;PCI Device: NVIDIA Corporation TU102 [GeForce RTX 2080 Ti Rev. A];           
+  0.0%;USB device: usb-device-8087-0aaa;           
+  0.0%;USB device: xHCI Host Controller;           
+  0.0%;USB device: AURA MOTHERBOARD (AsusTek Computer Inc.);           
+  0.0%;USB device: Dell USB Entry Keyboard (DELL);           
+  0.0%;USB device: xHCI Host Controller;           
+  0.0%;USB device: xHCI Host Controller;           
+  0.0%;USB device: USB Optical Mouse (Logitech);           
+  0.0%;PCI Device: Intel Corporation Cannon Lake PCH cAVS;           
+  0.0%;USB device: USB2.0 Hub;           
+  0.0%;USB device: ARGB Box (COOLERMASTER);           
+  0.0%;Audio codec hwC1D0: Nvidia;           
+  0.0%;Audio codec hwC0D0: Realtek;           
+  0.0 pkts/s;Network interface: wlo1 (iwlwifi);           
+  0.0%;PCI Device: Intel Corporation Cannon Lake PCH PCI Express Root Port #1;           
+  0.0%;PCI Device: NVIDIA Corporation TU102 USB 3.1 Host Controller;           
+  0.0%;PCI Device: NVIDIA Corporation TU102 USB Type-C UCSI Controller;           
+  0.0%;PCI Device: Intel Corporation Cannon Lake PCH HECI Controller;           
+  0.0%;runtime-PNP0C0B:03;           
+  0.0%;runtime-Fixed MDIO bus.0;           
+  0.0%;runtime-intel_rapl_msr.0;           
+  0.0%;runtime-snd-soc-dummy;           
+  0.0%;runtime-microcode;           
+  0.0%;runtime-eisa.0;           
+  0.0%;runtime-PNP0C0B:01;           
+  0.0%;runtime-INT33A1:00;           
+  0.0%;runtime-kgdboc;           
+  0.0%;runtime-PNP0C14:03;           
+  0.0%;runtime-PNP0C09:00;           
+  0.0%;runtime-iTCO_wdt;           
+  0.0%;runtime-reg-dummy;           
+  0.0%;runtime-alarmtimer.0.auto;           
+  0.0%;runtime-PNP0C14:00;           
+  0.0%;PCI Device: Intel Corporation Cannon Lake PCH SMBus Controller;           
+  0.0%;runtime-PNP0C0B:02;           
+  0.0%;runtime-PNP0103:00;           
+  0.0%;runtime-PNP0C04:00;           
+  0.0%;runtime-PNP0C0B:00;           
+  0.0%;runtime-efivars.0;           
+  0.0%;runtime-PNP0C0E:00;           
+  0.0%;runtime-serial8250;           
+  0.0%;runtime-regulatory.0;           
+  0.0%;runtime-coretemp.0;           
+  0.0%;I2C Device (1-0051): ee1004;           
+  0.0%;runtime-PNP0C0B:04;           
+  0.0%;runtime-PNP0C14:01;           
+  0.0%;runtime-rtc-efi.0;           
+  0.0%;runtime-ACPI000C:00;           
+  0.0%;I2C Device (1-0050): ee1004;           
+  0.0%;runtime-PNP0C0C:00;           
+  0.0%;runtime-eeepc-wmi;           
+  0.0%;I2C Adapter (i2c-4): NVIDIA i2c adapter 5 at 1:00.0;           
+  0.0%;runtime-PNP0C14:02;           
+  0.0%;runtime-pcspkr;           
+  0.0%;I2C Adapter (i2c-3): NVIDIA i2c adapter 3 at 1:00.0;           
+  0.0%;I2C Adapter (i2c-1): SMBus I801 adapter at efa0;           
+  0.0%;I2C Device (1-0037): dummy;           
+  0.0%;I2C Device (1-0053): ee1004;           
+  0.0%;I2C Adapter (i2c-6): NVIDIA i2c adapter 7 at 1:00.0;           
+  0.0%;runtime-PNP0C14:04;           
+  0.0%;USB device: xHCI Host Controller;           
+  0.0%;I2C Adapter (i2c-2): NVIDIA i2c adapter 1 at 1:00.0;           
+  0.0%;I2C Adapter (i2c-0): NVIDIA GPU I2C adapter;           
+  0.0%;I2C Device (1-0036): dummy;           
+  0.0%;I2C Adapter (i2c-7): NVIDIA i2c adapter 8 at 1:00.0;           
+  0.0%;I2C Device (1-0052): ee1004;           
+  0.0%;I2C Device (0-0008): ccgx-ucsi;           
+  0.0%;I2C Adapter (i2c-5): NVIDIA i2c adapter 6 at 1:00.0;           
+____________________________________________________________________
+ *  *  *   Process Device Activity   *  *  *
+
+Process;Device
+systemd;/dev/autofs
+;/dev/input/event0
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/input/event6
+;/dev/kmsg
+;/dev/rfkill
+systemd-journal;/dev/kmsg
+;/dev/kmsg
+acpid;/dev/input/event0
+;/dev/input/event1
+;/dev/input/event10
+;/dev/input/event11
+;/dev/input/event12
+;/dev/input/event13
+;/dev/input/event14
+;/dev/input/event15
+;/dev/input/event16
+;/dev/input/event17
+;/dev/input/event18
+;/dev/input/event19
+;/dev/input/event2
+;/dev/input/event20
+;/dev/input/event3
+;/dev/input/event6
+;/dev/input/event7
+;/dev/input/event8
+;/dev/input/event9
+bluetoothd;/dev/rfkill
+systemd-logind;/dev/input/event0
+;/dev/input/event0
+;/dev/input/event1
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/input/event6
+wpa_supplicant;/dev/rfkill
+;/dev/rfkill
+pulseaudio;/dev/snd/controlC0
+;/dev/snd/controlC0
+;/dev/snd/controlC1
+Xorg;/dev/dri/card0
+;/dev/dri/renderD128
+;/dev/dri/renderD128
+;/dev/input/event0
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/input/event6
+;/dev/nvidia-modeset
+;/dev/nvidia-modeset
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidiactl
+;/dev/nvidiactl
+;/dev/nvidiactl
+gvfsd-fuse;/dev/fuse
+gnome-shell;/dev/dri/renderD128
+;/dev/nvidia-modeset
+;/dev/nvidia-modeset
+;/dev/nvidia-modeset
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidia0
+;/dev/nvidiactl
+;/dev/nvidiactl
+gsd-rfkill;/dev/rfkill
+;/dev/rfkill
+gvfsd-fuse;/dev/fuse
+vivado;/dev/random
+
+____________________________________________________________________
+ *  *  *   AHCI ALPM Residency Statistics - Not supported on this macine   *  *  *
+
+____________________________________________________________________
+ *  *  *   Software Settings in Need of Tuning   *  *  *
+
+Description;Script
+VM writeback timeout;echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs';
+Enable SATA link power management for host5;echo 'min_power' > '/sys/class/scsi_host/host5/link_power_management_policy';
+Enable SATA link power management for host3;echo 'min_power' > '/sys/class/scsi_host/host3/link_power_management_policy';
+Enable SATA link power management for host1;echo 'min_power' > '/sys/class/scsi_host/host1/link_power_management_policy';
+Enable SATA link power management for host4;echo 'min_power' > '/sys/class/scsi_host/host4/link_power_management_policy';
+Enable SATA link power management for host2;echo 'min_power' > '/sys/class/scsi_host/host2/link_power_management_policy';
+Enable SATA link power management for host0;echo 'min_power' > '/sys/class/scsi_host/host0/link_power_management_policy';
+NMI watchdog should be turned off;echo '0' > '/proc/sys/kernel/nmi_watchdog';
+Autosuspend for USB device USB Optical Mouse [Logitech];echo 'auto' > '/sys/bus/usb/devices/1-8/power/control';
+Autosuspend for USB device AURA MOTHERBOARD [AsusTek Computer Inc.];echo 'auto' > '/sys/bus/usb/devices/1-6.4/power/control';
+Autosuspend for USB device ARGB Box [COOLERMASTER];echo 'auto' > '/sys/bus/usb/devices/1-11/power/control';
+Autosuspend for USB device Dell USB Entry Keyboard [DELL];echo 'auto' > '/sys/bus/usb/devices/1-7/power/control';
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/power/control';
+Runtime PM for port ata3 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata3/power/control';
+Runtime PM for disk sda;echo 'auto' > '/sys/block/sda/device/power/control';
+Runtime PM for port ata1 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata1/power/control';
+Runtime PM for PCI Device Intel Corporation SSD 660P Series;echo 'auto' > '/sys/bus/pci/devices/0000:03:00.0/power/control';
+Runtime PM for port ata2 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata2/power/control';
+Runtime PM for port ata4 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata4/power/control';
+Runtime PM for port ata5 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata5/power/control';
+Runtime PM for port ata6 of PCI device: Intel Corporation Cannon Lake PCH SATA AHCI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata6/power/control';
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH PCI Express Root Port #17;echo 'auto' > '/sys/bus/pci/devices/0000:00:1b.0/power/control';
+Runtime PM for PCI Device Intel Corporation Wireless-AC 9560 [Jefferson Peak];echo 'auto' > '/sys/bus/pci/devices/0000:00:14.3/power/control';
+Runtime PM for PCI Device Intel Corporation Z390 Chipset LPC/eSPI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH Shared SRAM;echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
+Runtime PM for PCI Device Intel Corporation SSD 660P Series;echo 'auto' > '/sys/bus/pci/devices/0000:05:00.0/power/control';
+Runtime PM for PCI Device Intel Corporation Ethernet Connection (7) I219-V;echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
+Runtime PM for PCI Device Intel Corporation 8th Gen Core 8-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S];echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH SPI Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.5/power/control';
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller;echo 'auto' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
+____________________________________________________________________
+ *  *  *   Untunable Software Issues   *  *  *
+
+Description
+I2C Device 1-0037 has no runtime power management
+I2C Device 1-0053 has no runtime power management
+I2C Device 1-0051 has no runtime power management
+I2C Device 1-0036 has no runtime power management
+I2C Device 1-0052 has no runtime power management
+I2C Device 1-0050 has no runtime power management
+____________________________________________________________________
+ *  *  *   Optimal Tuned Software Settings   *  *  *
+
+Description
+Enable Audio codec power management
+Bluetooth device interface status
+Runtime PM for I2C Adapter i2c-6 (NVIDIA i2c adapter 7 at 1:00.0)
+Autosuspend for USB device USB2.0 Hub [1-6]
+Autosuspend for USB device xHCI Host Controller [usb2]
+Runtime PM for I2C Adapter i2c-2 (NVIDIA i2c adapter 1 at 1:00.0)
+Autosuspend for USB device xHCI Host Controller [usb4]
+Autosuspend for USB device xHCI Host Controller [usb1]
+Autosuspend for USB device xHCI Host Controller [usb3]
+Runtime PM for I2C Adapter i2c-3 (NVIDIA i2c adapter 3 at 1:00.0)
+Runtime PM for I2C Adapter i2c-1 (SMBus I801 adapter at efa0)
+Runtime PM for I2C Adapter i2c-4 (NVIDIA i2c adapter 5 at 1:00.0)
+Runtime PM for I2C Adapter i2c-5 (NVIDIA i2c adapter 6 at 1:00.0)
+Runtime PM for I2C Adapter i2c-0 (NVIDIA GPU I2C adapter)
+Runtime PM for I2C Adapter i2c-7 (NVIDIA i2c adapter 8 at 1:00.0)
+I2C Device 0-0008 has no runtime power management
+Autosuspend for unknown USB device 1-14 (8087:0aaa)
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH PCI Express Root Port #1
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH PCI Express Root Port #21
+Runtime PM for PCI Device Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16)
+Runtime PM for PCI Device NVIDIA Corporation TU102 USB 3.1 Host Controller
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH HECI Controller
+Runtime PM for PCI Device NVIDIA Corporation TU102 [GeForce RTX 2080 Ti Rev. A]
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH cAVS
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH SMBus Controller
+Runtime PM for PCI Device NVIDIA Corporation TU102 USB Type-C UCSI Controller
+Runtime PM for PCI Device Intel Corporation Cannon Lake PCH PCI Express Root Port #9
+Runtime PM for PCI Device NVIDIA Corporation TU102 High Definition Audio Controller
+
+____________________________________________________________________
+ *  *  *   Wake status of the devices   *  *  *
+
+Description;Script
+Wake-on-lan status for device wlo1;echo 'enabled' > '/sys/class/net/wlo1/device/power/wakeup';
+Wake status for USB device 1-14;echo 'enabled' > '/sys/bus/usb/devices/1-14/power/wakeup';
+Wake status for USB device usb3;echo 'enabled' > '/sys/bus/usb/devices/usb3/power/wakeup';
+Wake status for USB device 1-6.4;echo 'enabled' > '/sys/bus/usb/devices/1-6.4/power/wakeup';
+Wake status for USB device usb1;echo 'enabled' > '/sys/bus/usb/devices/usb1/power/wakeup';
+Wake status for USB device usb4;echo 'enabled' > '/sys/bus/usb/devices/usb4/power/wakeup';
+Wake status for USB device 1-8;echo 'enabled' > '/sys/bus/usb/devices/1-8/power/wakeup';
+Wake status for USB device usb2;echo 'enabled' > '/sys/bus/usb/devices/usb2/power/wakeup';
+Wake status for USB device 1-6;echo 'enabled' > '/sys/bus/usb/devices/1-6/power/wakeup';

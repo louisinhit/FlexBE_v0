@@ -1,0 +1,701 @@
+Running CPU precision benchmark
+PY_FILE=cpu_precision_bench_fftw_fp32.py
+LOG_FILE=cpu_precision_bench_fftw_fp32_log.txt
+BATCHES=1 2 4 6 8 10
+TORCH_THREADS=0
+FFTW_THREADS=1
+ROUNDS=100
+WARMUP=10
+FORCE_FFTW_LOOP=0
+
+========== batch=1 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 1
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 1
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.00595862 s
+  throughput  : 167.8242 samples/s
+  timings[:10]: [0.005833246046677232, 0.0059641830157488585, 0.005853200098499656, 0.006030687130987644, 0.005933681037276983, 0.0059779000002890825, 0.005906881066039205, 0.005948189878836274, 0.005927268182858825, 0.005956752924248576] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 1
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.02351490 s
+  throughput  : 42.5262 samples/s
+  timings[:10]: [0.023515788838267326, 0.023434086004272103, 0.023392482195049524, 0.02349320100620389, 0.023396719014272094, 0.023502793861553073, 0.023354142904281616, 0.02341659995727241, 0.023593893041834235, 0.024977704975754023] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 1
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.00604121 s
+  throughput  : 165.5297 samples/s
+  timings[:10]: [0.0060380068607628345, 0.00602691201493144, 0.0060721891932189465, 0.006051200209185481, 0.006036743056029081, 0.006032120203599334, 0.006002113921567798, 0.006136991083621979, 0.0060508958995342255, 0.005937161855399609] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.00595862 s, throughput=167.8242 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.02351490 s, throughput=42.5262 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.00604121 s, throughput=165.5297 samples/s
+
+========== batch=2 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 2
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 2
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.00721701 s
+  throughput  : 277.1229 samples/s
+  timings[:10]: [0.0071466038934886456, 0.007169544929638505, 0.007174162194132805, 0.007168956100940704, 0.007170245051383972, 0.007176057901233435, 0.007178787840530276, 0.007187275914475322, 0.007168931886553764, 0.0071725810412317514] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 2
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.02206801 s
+  throughput  : 90.6289 samples/s
+  timings[:10]: [0.022254303097724915, 0.022085407050326467, 0.02207895298488438, 0.02204824611544609, 0.0219608040060848, 0.022898376220837235, 0.022357894107699394, 0.022067576879635453, 0.022028099978342652, 0.022196911042556167] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 2
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.00809551 s
+  throughput  : 247.0507 samples/s
+  timings[:10]: [0.008239957969635725, 0.008093322860077024, 0.008095646975561976, 0.008085753070190549, 0.008091718889772892, 0.008054777048528194, 0.008073254954069853, 0.00809771683998406, 0.008077325066551566, 0.00805616402067244] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.00721701 s, throughput=277.1229 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.02206801 s, throughput=90.6289 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.00809551 s, throughput=247.0507 samples/s
+
+========== batch=4 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 4
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 4
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.01223019 s
+  throughput  : 327.0596 samples/s
+  timings[:10]: [0.012331125093623996, 0.012190826935693622, 0.012308872072026134, 0.01213546609506011, 0.01224109879694879, 0.013336414005607367, 0.012297128094360232, 0.012125708861276507, 0.012312432052567601, 0.012244150042533875] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 4
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.03986215 s
+  throughput  : 100.3458 samples/s
+  timings[:10]: [0.040842482121661305, 0.040143545949831605, 0.04068733099848032, 0.039694197941571474, 0.03977777692489326, 0.039628053084015846, 0.039743978064507246, 0.039676522836089134, 0.039753703866153955, 0.03975973394699395] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 4
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.01310275 s
+  throughput  : 305.2794 samples/s
+  timings[:10]: [0.01292322389781475, 0.012865474913269281, 0.013067407999187708, 0.013079198077321053, 0.013183292001485825, 0.013148781144991517, 0.013251373078674078, 0.013110155938193202, 0.01317846798337996, 0.013163150055333972] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.01223019 s, throughput=327.0596 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.03986215 s, throughput=100.3458 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.01310275 s, throughput=305.2794 samples/s
+
+========== batch=6 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 6
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 6
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.01625235 s
+  throughput  : 369.1773 samples/s
+  timings[:10]: [0.015836216043680906, 0.017519853077828884, 0.016060186782851815, 0.017237660009413958, 0.016872206004336476, 0.0157503099180758, 0.01608217810280621, 0.016271694097667933, 0.016569291008636355, 0.01614647707901895] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 6
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.05682359 s
+  throughput  : 105.5900 samples/s
+  timings[:10]: [0.05675707804039121, 0.05669305892661214, 0.05684464401565492, 0.05674489098601043, 0.0575182419270277, 0.05684377090074122, 0.05689190118573606, 0.05687287007458508, 0.05679082707501948, 0.05682390811853111] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 6
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.01857275 s
+  throughput  : 323.0539 samples/s
+  timings[:10]: [0.018534939968958497, 0.017960466910153627, 0.018634197069332004, 0.018358485074713826, 0.018513204995542765, 0.018029249040409923, 0.018204777967184782, 0.0178510129917413, 0.018290559062734246, 0.017971572000533342] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.01625235 s, throughput=369.1773 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.05682359 s, throughput=105.5900 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.01857275 s, throughput=323.0539 samples/s
+
+========== batch=8 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 8
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 8
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.02272870 s
+  throughput  : 351.9778 samples/s
+  timings[:10]: [0.022513935109600425, 0.022856599185615778, 0.023298664949834347, 0.022636420093476772, 0.023718756157904863, 0.022677266970276833, 0.021211585961282253, 0.022918109083548188, 0.02404658915475011, 0.022679493064060807] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 8
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.07341229 s
+  throughput  : 108.9736 samples/s
+  timings[:10]: [0.0735737041104585, 0.07277095993049443, 0.0733807107899338, 0.07301393710076809, 0.07351109711453319, 0.07316366792656481, 0.0733884850051254, 0.07317531481385231, 0.07351610600017011, 0.07305725594051182] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 8
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.02589136 s
+  throughput  : 308.9833 samples/s
+  timings[:10]: [0.025345470057800412, 0.025880469009280205, 0.02533976291306317, 0.025922991102561355, 0.026248461101204157, 0.027403638930991292, 0.02606111904606223, 0.026084695011377335, 0.025501918978989124, 0.025916427839547396] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.02272870 s, throughput=351.9778 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.07341229 s, throughput=108.9736 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.02589136 s, throughput=308.9833 samples/s
+
+========== batch=10 ==========
+
+====================================================================================================
+CPU strict precision benchmark: FP32 baseline + torch FP32FFT/FP16NN + FFTW FP32FFT/FP32NN
+batch_size    : 10
+rounds        : 100
+warmup        : 10
+torch threads : 8
+fftw threads  : 1
+force fftw loop: False
+====================================================================================================
+[CPU / SOFTWARE INFO]
+  platform          : Linux-5.15.0-134-generic-x86_64-with-glibc2.31
+  processor         : x86_64
+  torch version     : 2.7.1+cu128
+  numpy version     : 1.26.4
+  pyfftw available  : True
+  pyfftw version    : 0.15.1
+  mkldnn enabled    : True
+  torch num threads : 8
+  interop threads   : 8
+  cpu capability    : AVX2
+
+[lscpu relevant lines]
+Model name:                           Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+
+
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 10
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_TORCHFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.02909524 s
+  throughput  : 343.6988 samples/s
+  timings[:10]: [0.028753471095114946, 0.028980704955756664, 0.02899736608378589, 0.029064272064715624, 0.029146165819838643, 0.02891417103819549, 0.029057034058496356, 0.029043995076790452, 0.029015361098572612, 0.029142788145691156] ...
+
+--------------------------------------------------------------------------------
+Running case : CPU_TORCHFFT_FP32FFT_FP16NN_strict
+Device       : CPU
+Batch size   : 10
+FFT backend  : torch
+FFTW mode    : N/A
+NN dtype     : torch.float16
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : torch
+  fftw_mode             : N/A
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float16
+  lin_0_weight_dtype    : torch.float16
+  lin_0_bias_dtype      : torch.float16
+  output_0_dtype        : torch.float16
+
+[OK] CPU_TORCHFFT_FP32FFT_FP16NN_strict
+  avg latency : 0.08938586 s
+  throughput  : 111.8745 samples/s
+  timings[:10]: [0.08937168214470148, 0.08898105495609343, 0.08997644321061671, 0.08919282094575465, 0.08903153194114566, 0.08912044600583613, 0.08911739196628332, 0.08922672504559159, 0.08914225199259818, 0.08933121897280216] ...
+[FFTW WARNING] batched plan unavailable: RuntimeError('The data has an uncaught error that led to the planner returning NULL. This is a bug.')
+[FFTW] using stable reusable 1-D complex64 plan instead
+[FFTW] 1-D complex64 loop plan created: N=32768, threads=1, flags=('FFTW_ESTIMATE',)
+
+--------------------------------------------------------------------------------
+Running case : CPU_FFTWFFT_FP32FFT_FP32NN_strict
+Device       : CPU
+Batch size   : 10
+FFT backend  : fftw
+FFTW mode    : loop_1d
+NN dtype     : torch.float32
+--------------------------------------------------------------------------------
+[DTYPE PROBE] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  input_dtype           : torch.complex64
+  input_real_dtype      : torch.float32
+  fft_backend           : fftw
+  fftw_mode             : loop_1d
+  fft_inputs_dtype      : torch.complex64
+  fft_outputs_dtype     : torch.complex64
+  abs_output_dtype      : torch.float32
+  nn_input_dtype        : torch.float32
+  lin_0_weight_dtype    : torch.float32
+  lin_0_bias_dtype      : torch.float32
+  output_0_dtype        : torch.float32
+
+[OK] CPU_FFTWFFT_FP32FFT_FP32NN_strict
+  avg latency : 0.03257374 s
+  throughput  : 306.9957 samples/s
+  timings[:10]: [0.03314356994815171, 0.03057739813812077, 0.03403578302823007, 0.030626488151028752, 0.033837234135717154, 0.030729350866749883, 0.03297711699269712, 0.03316914406605065, 0.03116183914244175, 0.03413253603503108] ...
+
+================ SUMMARY ================
+CPU_TORCHFFT_FP32FFT_FP32NN_strict: latency=0.02909524 s, throughput=343.6988 samples/s
+CPU_TORCHFFT_FP32FFT_FP16NN_strict: latency=0.08938586 s, throughput=111.8745 samples/s
+CPU_FFTWFFT_FP32FFT_FP32NN_strict: latency=0.03257374 s, throughput=306.9957 samples/s
+
+Done. Log saved to cpu_precision_bench_fftw_fp32_log.txt
