@@ -1,0 +1,296 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date             : Wed May 13 23:04:53 2026
+| Host             : dust running 64-bit Ubuntu 20.04.3 LTS
+| Command          : report_power -file /srv/seagate2g/home/userr/vivado_24/vivado_x/project_fb_fp/cli_reports/power_impl.rpt
+| Design           : bfly_acc_top_hbm
+| Device           : xcvu37p-fsvh2892-2L-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 19.798       |
+|   FPGA Power (W)         | 16.959       |
+|   HBM Power (W)          | 2.839        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 16.302       |
+| Device Static (W)        | 3.496        |
+| Effective TJA (C/W)      | 0.4          |
+| Max Ambient (C)          | 91.4         |
+| Junction Temperature (C) | 33.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     6.080 |       10 |       --- |             --- |
+| CLB Logic                |     0.981 |  2830562 |       --- |             --- |
+|   LUT as Logic           |     0.865 |   977766 |   1303680 |           75.00 |
+|   Register               |     0.083 |  1150319 |   2607360 |           44.12 |
+|   CARRY8                 |     0.029 |    51589 |    162960 |           31.66 |
+|   LUT as Shift Register  |     0.004 |     1026 |    600960 |            0.17 |
+|   LUT as Distributed RAM |    <0.001 |       28 |    600960 |           <0.01 |
+|   Others                 |     0.000 |   369165 |       --- |             --- |
+|   BUFG                   |     0.000 |        1 |        96 |            1.04 |
+| Signals                  |     1.856 |  2079183 |       --- |             --- |
+| Block RAM                |     1.197 |     1226 |      2016 |           60.81 |
+| HBM                      |     4.895 |        1 |         2 |           50.00 |
+| MMCM                     |     0.099 |        0 |       --- |             --- |
+| DSPs                     |     1.129 |     5511 |      9024 |           61.07 |
+| I/O                      |     0.009 |       96 |       624 |           15.38 |
+| Static Power             |     3.496 |          |           |                 |
+|   HBM Static             |     0.261 |          |           |                 |
+|   Device Static          |     3.235 |          |           |                 |
+| Total                    |    19.742 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |    15.037 |      13.375 |      1.662 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     2.240 |       1.968 |      0.272 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.100 |       0.060 |      0.040 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.911 |       0.105 |      0.806 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.038 |       0.003 |      0.035 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.001 |       0.001 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.024 |       0.000 |      0.024 |       NA    | Unspecified | NA         |
+| VCC_IO_HBM |       1.200 |     1.356 |       1.270 |      0.085 |       NA    | Unspecified | NA         |
+| VCC_HBM    |       1.200 |     1.269 |       1.182 |      0.087 |       NA    | Unspecified | NA         |
+| VCCAUX_HBM |       2.500 |     0.049 |       0.028 |      0.022 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.4                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 0.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+-----------------+
+| Clock                                                                                               | Domain                                                             | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+-----------------+
+| clk_out1_clk_wiz_0                                                                                  | u_hbm_0/u_hbm_top/inst_clk_wiz_0/inst/clk_out1_clk_wiz_0           |            10.0 |
+| clk_out2_clk_wiz_0                                                                                  | u_hbm_0/u_hbm_top/inst_clk_wiz_0/inst/clk_out2_clk_wiz_0           |             5.0 |
+| clk_out3_clk_wiz_0                                                                                  | u_hbm_0/u_hbm_top/inst_clk_wiz_0/inst/clk_out3                     |            10.0 |
+| clk_out3_clk_wiz_0                                                                                  | u_hbm_0/u_hbm_top/inst_clk_wiz_0/inst/clk_out3_clk_wiz_0           |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/DRCK |            50.0 |
+| ddr0_clk                                                                                            | ddr0_clk                                                           |            10.0 |
+| ddr0_clk                                                                                            | ddr0_clk_IBUF_BUFGCE                                               |            10.0 |
+| sys_clk                                                                                             | sys_clk                                                            |             5.0 |
+| u_hbm_0/u_hbm_top/hbm_u/inst/HBM_REF_CLK_0                                                          | u_hbm_0/u_hbm_top/hbm_u/inst/HBM_REF_CLK_0_bufg                    |            10.0 |
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------------------------+-----------+
+| Name                                                             | Power (W) |
++------------------------------------------------------------------+-----------+
+| bfly_acc_top_hbm                                                 |    16.245 |
+|   dbg_hub                                                        |     0.003 |
+|     inst                                                         |     0.003 |
+|       BSCANID.u_xsdbm_id                                         |     0.003 |
+|   u_bp                                                           |    10.733 |
+|     GENERATE_BP_ENGINE[0].u_butterfly_engine_opt                 |     0.576 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       u_butterfly_engine_opt_control                             |     0.172 |
+|     GENERATE_BP_ENGINE[10].u_butterfly_engine_opt                |     0.580 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.133 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       u_butterfly_engine_opt_control                             |     0.175 |
+|     GENERATE_BP_ENGINE[11].u_butterfly_engine_opt                |     0.580 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       u_butterfly_engine_opt_control                             |     0.174 |
+|     GENERATE_BP_ENGINE[12].u_butterfly_engine_opt                |     0.581 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       u_butterfly_engine_opt_control                             |     0.176 |
+|     GENERATE_BP_ENGINE[13].u_butterfly_engine_opt                |     0.555 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.128 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.129 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.130 |
+|       u_butterfly_engine_opt_control                             |     0.168 |
+|     GENERATE_BP_ENGINE[14].u_butterfly_engine_opt                |     0.543 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.127 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.128 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.126 |
+|       u_butterfly_engine_opt_control                             |     0.163 |
+|     GENERATE_BP_ENGINE[15].u_butterfly_engine_opt                |     0.562 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.129 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.131 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       u_butterfly_engine_opt_control                             |     0.166 |
+|     GENERATE_BP_ENGINE[16].u_butterfly_engine_opt                |     0.511 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.117 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       u_butterfly_engine_opt_control                             |     0.158 |
+|     GENERATE_BP_ENGINE[17].u_butterfly_engine_opt                |     0.512 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       u_butterfly_engine_opt_control                             |     0.159 |
+|     GENERATE_BP_ENGINE[18].u_butterfly_engine_opt                |     0.514 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.118 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.119 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.120 |
+|       u_butterfly_engine_opt_control                             |     0.157 |
+|     GENERATE_BP_ENGINE[1].u_butterfly_engine_opt                 |     0.577 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.133 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.133 |
+|       u_butterfly_engine_opt_control                             |     0.175 |
+|     GENERATE_BP_ENGINE[2].u_butterfly_engine_opt                 |     0.577 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       u_butterfly_engine_opt_control                             |     0.173 |
+|     GENERATE_BP_ENGINE[3].u_butterfly_engine_opt                 |     0.580 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       u_butterfly_engine_opt_control                             |     0.175 |
+|     GENERATE_BP_ENGINE[4].u_butterfly_engine_opt                 |     0.579 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       u_butterfly_engine_opt_control                             |     0.173 |
+|     GENERATE_BP_ENGINE[5].u_butterfly_engine_opt                 |     0.574 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       u_butterfly_engine_opt_control                             |     0.170 |
+|     GENERATE_BP_ENGINE[6].u_butterfly_engine_opt                 |     0.573 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.132 |
+|       u_butterfly_engine_opt_control                             |     0.170 |
+|     GENERATE_BP_ENGINE[7].u_butterfly_engine_opt                 |     0.584 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.136 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.138 |
+|       u_butterfly_engine_opt_control                             |     0.175 |
+|     GENERATE_BP_ENGINE[8].u_butterfly_engine_opt                 |     0.572 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.133 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.134 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.133 |
+|       u_butterfly_engine_opt_control                             |     0.171 |
+|     GENERATE_BP_ENGINE[9].u_butterfly_engine_opt                 |     0.585 |
+|       GENERATE_ENGINE[1].u_butterfly_engine_opt_comp_1           |     0.137 |
+|       GENERATE_ENGINE[2].u_butterfly_engine_opt_comp_1           |     0.135 |
+|       GENERATE_ENGINE[3].u_butterfly_engine_opt_comp_1           |     0.137 |
+|       u_butterfly_engine_opt_control                             |     0.176 |
+|     u_weight_ram                                                 |     0.018 |
+|       u_pingpong_ram_2d                                          |     0.009 |
+|   u_data_in_pack                                                 |     0.048 |
+|   u_hbm_0                                                        |     5.433 |
+|     u_hbm_control                                                |     0.007 |
+|     u_hbm_top                                                    |     5.425 |
+|       GENERATE_READ_INPUT_BUFFER[0].u_hbm_auto_read_input        |     0.005 |
+|       GENERATE_READ_INPUT_BUFFER[1].u_hbm_auto_read_input        |     0.004 |
+|       GENERATE_READ_INPUT_BUFFER[2].u_hbm_auto_read_input        |     0.004 |
+|       GENERATE_READ_INPUT_BUFFER[3].u_hbm_auto_read_input        |     0.005 |
+|       GENERATE_READ_INPUT_BUFFER[4].u_hbm_auto_read_input        |     0.004 |
+|       GENERATE_READ_INPUT_BUFFER[5].u_hbm_auto_read_input        |     0.005 |
+|       GENERATE_READ_INPUT_BUFFER[6].u_hbm_auto_read_input        |     0.005 |
+|       GENERATE_READ_INPUT_BUFFER[7].u_hbm_auto_read_input        |     0.005 |
+|       GENERATE_READ_WEIGHT_BUFFER[8].u_hbm_auto_read_weight      |     0.005 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[10].u_hbm_custom_write_output |     0.029 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[11].u_hbm_custom_write_output |     0.039 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[12].u_hbm_custom_write_output |     0.040 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[13].u_hbm_custom_write_output |     0.045 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[14].u_hbm_custom_write_output |     0.034 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[15].u_hbm_custom_write_output |     0.027 |
+|       GENERATE_WRITE_OUTPUT_BUFFER[9].u_hbm_custom_write_output  |     0.034 |
+|       GENERATE_WRITE_WEIGHT_BUFFER[8].u_hbm_custom_write_weight  |     0.024 |
+|       hbm_u                                                      |     4.906 |
+|       inst_clk_wiz_0                                             |     0.099 |
+|   u_weight_pack                                                  |     0.007 |
++------------------------------------------------------------------+-----------+
+
+
