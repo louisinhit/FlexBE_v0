@@ -1,0 +1,1691 @@
+Start 
+Argument batch_size : 0 
+Argument boi_thre : 14.0 
+Argument channel : 4 
+Argument cuda : 2 
+Argument exp_bit : 5 
+Argument fabnet_att_layer : -1 
+Argument is_butterfly : True 
+Argument is_quant : False 
+Argument man_bit : 10 
+Argument model : mlp 
+Argument noise_max : 0.3 
+Argument num_layers : 3 
+Argument pool_stride : 8 
+Argument pool_type : max 
+Argument skip_train : 0 
+Argument task : modulation 
+Argument tile_size : -1 
+Argument train_set : 2022 
+Argument transformer_dim : 32 
+Argument transformer_hidden_dim : 32 
+num_parameter: 68680
+number of epoch will be : 160
+AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-06
+    foreach: None
+    fused: None
+    initial_lr: 0.0001
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+<torch.optim.lr_scheduler.CyclicLR object at 0x7c478b172550>
+.........None found model!!.....
+Train Epoch: 1   	 Loss: 2.104376	  lr : 0.000188 
+Train Epoch: 1   	 Loss: 1.992068	  lr : 0.000276 
+Train Epoch: 1   	 Loss: 1.607542	  lr : 0.000363 
+Train Epoch: 1   	 Loss: 1.354314	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 15381.0/32000.0 (48.066%)
+
+
+Test set on 2022 : Accuracy: 15586.0/32000.0 (48.706%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.48066
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.48706
+Train Epoch: 2   	 Loss: 1.065667	  lr : 0.000626 
+Train Epoch: 2   	 Loss: 1.005723	  lr : 0.000713 
+Train Epoch: 2   	 Loss: 0.976584	  lr : 0.000799 
+Train Epoch: 2   	 Loss: 0.964397	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 16560.0/32000.0 (51.750%)
+
+
+Test set on 2022 : Accuracy: 17591.0/32000.0 (54.972%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.51750
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.54972
+Train Epoch: 3   	 Loss: 0.905255	  lr : 0.000537 
+Train Epoch: 3   	 Loss: 0.875244	  lr : 0.000449 
+Train Epoch: 3   	 Loss: 0.861159	  lr : 0.000362 
+Train Epoch: 3   	 Loss: 0.837454	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 17353.0/32000.0 (54.228%)
+
+
+Test set on 2022 : Accuracy: 18025.0/32000.0 (56.328%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.54228
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.56328
+Train Epoch: 4   	 Loss: 0.823092	  lr : 0.000101 
+Train Epoch: 4   	 Loss: 0.817850	  lr : 0.000188 
+Train Epoch: 4   	 Loss: 0.805090	  lr : 0.000276 
+Train Epoch: 4   	 Loss: 0.826699	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 17301.0/32000.0 (54.066%)
+
+
+Test set on 2022 : Accuracy: 17880.0/32000.0 (55.875%)
+
+Train Epoch: 5   	 Loss: 0.855869	  lr : 0.000538 
+Train Epoch: 5   	 Loss: 0.863674	  lr : 0.000626 
+Train Epoch: 5   	 Loss: 0.834136	  lr : 0.000713 
+Train Epoch: 5   	 Loss: 0.844508	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 16630.0/32000.0 (51.969%)
+
+
+Test set on 2022 : Accuracy: 17691.0/32000.0 (55.284%)
+
+Train Epoch: 6   	 Loss: 0.868733	  lr : 0.000624 
+Train Epoch: 6   	 Loss: 0.819007	  lr : 0.000537 
+Train Epoch: 6   	 Loss: 0.829527	  lr : 0.000449 
+Train Epoch: 6   	 Loss: 0.808896	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 17236.0/32000.0 (53.862%)
+
+
+Test set on 2022 : Accuracy: 18178.0/32000.0 (56.806%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.56806
+Train Epoch: 7   	 Loss: 0.789825	  lr : 0.000187 
+Train Epoch: 7   	 Loss: 0.781213	  lr : 0.000101 
+Train Epoch: 7   	 Loss: 0.780711	  lr : 0.000188 
+Train Epoch: 7   	 Loss: 0.783508	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 16644.0/32000.0 (52.013%)
+
+
+Test set on 2022 : Accuracy: 17920.0/32000.0 (56.000%)
+
+Train Epoch: 8   	 Loss: 0.810368	  lr : 0.000451 
+Train Epoch: 8   	 Loss: 0.821639	  lr : 0.000538 
+Train Epoch: 8   	 Loss: 0.801113	  lr : 0.000626 
+Train Epoch: 8   	 Loss: 0.819778	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 17327.0/32000.0 (54.147%)
+
+
+Test set on 2022 : Accuracy: 19075.0/32000.0 (59.609%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.59609
+Train Epoch: 9   	 Loss: 0.820654	  lr : 0.000712 
+Train Epoch: 9   	 Loss: 0.796836	  lr : 0.000624 
+Train Epoch: 9   	 Loss: 0.816010	  lr : 0.000537 
+Train Epoch: 9   	 Loss: 0.801372	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 16137.0/32000.0 (50.428%)
+
+
+Test set on 2022 : Accuracy: 16982.0/32000.0 (53.069%)
+
+Train Epoch: 10   	 Loss: 0.797972	  lr : 0.000274 
+Train Epoch: 10   	 Loss: 0.764989	  lr : 0.000187 
+Train Epoch: 10   	 Loss: 0.754618	  lr : 0.000101 
+Train Epoch: 10   	 Loss: 0.742394	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 18188.0/32000.0 (56.837%)
+
+
+Test set on 2022 : Accuracy: 20060.0/32000.0 (62.688%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.56837
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.62687
+Train Epoch: 11   	 Loss: 0.770114	  lr : 0.000363 
+Train Epoch: 11   	 Loss: 0.766056	  lr : 0.000451 
+Train Epoch: 11   	 Loss: 0.777653	  lr : 0.000538 
+Train Epoch: 11   	 Loss: 0.771935	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 18177.0/32000.0 (56.803%)
+
+
+Test set on 2022 : Accuracy: 19801.0/32000.0 (61.878%)
+
+Train Epoch: 12   	 Loss: 0.788060	  lr : 0.000799 
+Train Epoch: 12   	 Loss: 0.800711	  lr : 0.000712 
+Train Epoch: 12   	 Loss: 0.781563	  lr : 0.000624 
+Train Epoch: 12   	 Loss: 0.779734	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 18798.0/32000.0 (58.744%)
+
+
+Test set on 2022 : Accuracy: 20488.0/32000.0 (64.025%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.58744
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.64025
+Train Epoch: 13   	 Loss: 0.744191	  lr : 0.000362 
+Train Epoch: 13   	 Loss: 0.738509	  lr : 0.000274 
+Train Epoch: 13   	 Loss: 0.739000	  lr : 0.000187 
+Train Epoch: 13   	 Loss: 0.715282	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 18542.0/32000.0 (57.944%)
+
+
+Test set on 2022 : Accuracy: 20405.0/32000.0 (63.766%)
+
+Train Epoch: 14   	 Loss: 0.736941	  lr : 0.000276 
+Train Epoch: 14   	 Loss: 0.733973	  lr : 0.000363 
+Train Epoch: 14   	 Loss: 0.722854	  lr : 0.000451 
+Train Epoch: 14   	 Loss: 0.749069	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 18672.0/32000.0 (58.350%)
+
+
+Test set on 2022 : Accuracy: 20169.0/32000.0 (63.028%)
+
+Train Epoch: 15   	 Loss: 0.761928	  lr : 0.000713 
+Train Epoch: 15   	 Loss: 0.758223	  lr : 0.000799 
+Train Epoch: 15   	 Loss: 0.744653	  lr : 0.000712 
+Train Epoch: 15   	 Loss: 0.710657	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 20815.0/32000.0 (65.047%)
+
+
+Test set on 2022 : Accuracy: 21598.0/32000.0 (67.494%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.65047
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.67494
+Train Epoch: 16   	 Loss: 0.691391	  lr : 0.000449 
+Train Epoch: 16   	 Loss: 0.641873	  lr : 0.000362 
+Train Epoch: 16   	 Loss: 0.617871	  lr : 0.000274 
+Train Epoch: 16   	 Loss: 0.599149	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 21566.0/32000.0 (67.394%)
+
+
+Test set on 2022 : Accuracy: 23330.0/32000.0 (72.906%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.67394
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.72906
+Train Epoch: 17   	 Loss: 0.580449	  lr : 0.000188 
+Train Epoch: 17   	 Loss: 0.571979	  lr : 0.000276 
+Train Epoch: 17   	 Loss: 0.571399	  lr : 0.000363 
+Train Epoch: 17   	 Loss: 0.581467	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 22668.0/32000.0 (70.838%)
+
+
+Test set on 2022 : Accuracy: 24040.0/32000.0 (75.125%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.70837
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.75125
+Train Epoch: 18   	 Loss: 0.546792	  lr : 0.000626 
+Train Epoch: 18   	 Loss: 0.547355	  lr : 0.000713 
+Train Epoch: 18   	 Loss: 0.480898	  lr : 0.000799 
+Train Epoch: 18   	 Loss: 0.481132	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 24005.0/32000.0 (75.016%)
+
+
+Test set on 2022 : Accuracy: 25468.0/32000.0 (79.588%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.75016
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.79587
+Train Epoch: 19   	 Loss: 0.422871	  lr : 0.000537 
+Train Epoch: 19   	 Loss: 0.397341	  lr : 0.000449 
+Train Epoch: 19   	 Loss: 0.391009	  lr : 0.000362 
+Train Epoch: 19   	 Loss: 0.376129	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 25342.0/32000.0 (79.194%)
+
+
+Test set on 2022 : Accuracy: 26263.0/32000.0 (82.072%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.79194
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.82072
+Train Epoch: 20   	 Loss: 0.360319	  lr : 0.000101 
+Train Epoch: 20   	 Loss: 0.356326	  lr : 0.000188 
+Train Epoch: 20   	 Loss: 0.360222	  lr : 0.000276 
+Train Epoch: 20   	 Loss: 0.375014	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 25338.0/32000.0 (79.181%)
+
+
+Test set on 2022 : Accuracy: 26206.0/32000.0 (81.894%)
+
+Train Epoch: 21   	 Loss: 0.374804	  lr : 0.000538 
+Train Epoch: 21   	 Loss: 0.392300	  lr : 0.000626 
+Train Epoch: 21   	 Loss: 0.397427	  lr : 0.000713 
+Train Epoch: 21   	 Loss: 0.379702	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 25386.0/32000.0 (79.331%)
+
+
+Test set on 2022 : Accuracy: 25740.0/32000.0 (80.438%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.79331
+Train Epoch: 22   	 Loss: 0.369910	  lr : 0.000624 
+Train Epoch: 22   	 Loss: 0.392806	  lr : 0.000537 
+Train Epoch: 22   	 Loss: 0.365994	  lr : 0.000449 
+Train Epoch: 22   	 Loss: 0.353280	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 25695.0/32000.0 (80.297%)
+
+
+Test set on 2022 : Accuracy: 26486.0/32000.0 (82.769%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.80297
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.82769
+Train Epoch: 23   	 Loss: 0.349173	  lr : 0.000187 
+Train Epoch: 23   	 Loss: 0.342006	  lr : 0.000101 
+Train Epoch: 23   	 Loss: 0.331883	  lr : 0.000188 
+Train Epoch: 23   	 Loss: 0.346378	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 25122.0/32000.0 (78.506%)
+
+
+Test set on 2022 : Accuracy: 26550.0/32000.0 (82.969%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.82969
+Train Epoch: 24   	 Loss: 0.363738	  lr : 0.000451 
+Train Epoch: 24   	 Loss: 0.353099	  lr : 0.000538 
+Train Epoch: 24   	 Loss: 0.370579	  lr : 0.000626 
+Train Epoch: 24   	 Loss: 0.385381	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 24771.0/32000.0 (77.409%)
+
+
+Test set on 2022 : Accuracy: 26286.0/32000.0 (82.144%)
+
+Train Epoch: 25   	 Loss: 0.387666	  lr : 0.000712 
+Train Epoch: 25   	 Loss: 0.370988	  lr : 0.000624 
+Train Epoch: 25   	 Loss: 0.364587	  lr : 0.000537 
+Train Epoch: 25   	 Loss: 0.362971	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 25830.0/32000.0 (80.719%)
+
+
+Test set on 2022 : Accuracy: 26256.0/32000.0 (82.050%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.80719
+Train Epoch: 26   	 Loss: 0.354336	  lr : 0.000274 
+Train Epoch: 26   	 Loss: 0.333876	  lr : 0.000187 
+Train Epoch: 26   	 Loss: 0.325680	  lr : 0.000101 
+Train Epoch: 26   	 Loss: 0.327061	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 25271.0/32000.0 (78.972%)
+
+
+Test set on 2022 : Accuracy: 26590.0/32000.0 (83.094%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.83094
+Train Epoch: 27   	 Loss: 0.342776	  lr : 0.000363 
+Train Epoch: 27   	 Loss: 0.348778	  lr : 0.000451 
+Train Epoch: 27   	 Loss: 0.356170	  lr : 0.000538 
+Train Epoch: 27   	 Loss: 0.359733	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 23807.0/32000.0 (74.397%)
+
+
+Test set on 2022 : Accuracy: 26061.0/32000.0 (81.441%)
+
+Train Epoch: 28   	 Loss: 0.364580	  lr : 0.000799 
+Train Epoch: 28   	 Loss: 0.356618	  lr : 0.000712 
+Train Epoch: 28   	 Loss: 0.361306	  lr : 0.000624 
+Train Epoch: 28   	 Loss: 0.347466	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 25199.0/32000.0 (78.747%)
+
+
+Test set on 2022 : Accuracy: 26105.0/32000.0 (81.578%)
+
+Train Epoch: 29   	 Loss: 0.342249	  lr : 0.000362 
+Train Epoch: 29   	 Loss: 0.338080	  lr : 0.000274 
+Train Epoch: 29   	 Loss: 0.323200	  lr : 0.000187 
+Train Epoch: 29   	 Loss: 0.332253	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 25493.0/32000.0 (79.666%)
+
+
+Test set on 2022 : Accuracy: 26753.0/32000.0 (83.603%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.83603
+Train Epoch: 30   	 Loss: 0.335696	  lr : 0.000276 
+Train Epoch: 30   	 Loss: 0.332422	  lr : 0.000363 
+Train Epoch: 30   	 Loss: 0.334590	  lr : 0.000451 
+Train Epoch: 30   	 Loss: 0.338624	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 24445.0/32000.0 (76.391%)
+
+
+Test set on 2022 : Accuracy: 26347.0/32000.0 (82.334%)
+
+Train Epoch: 31   	 Loss: 0.364801	  lr : 0.000713 
+Train Epoch: 31   	 Loss: 0.380477	  lr : 0.000799 
+Train Epoch: 31   	 Loss: 0.369212	  lr : 0.000712 
+Train Epoch: 31   	 Loss: 0.345191	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26183.0/32000.0 (81.822%)
+
+
+Test set on 2022 : Accuracy: 26588.0/32000.0 (83.088%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.81822
+Train Epoch: 32   	 Loss: 0.342030	  lr : 0.000449 
+Train Epoch: 32   	 Loss: 0.338155	  lr : 0.000362 
+Train Epoch: 32   	 Loss: 0.336191	  lr : 0.000274 
+Train Epoch: 32   	 Loss: 0.320627	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26116.0/32000.0 (81.612%)
+
+
+Test set on 2022 : Accuracy: 26840.0/32000.0 (83.875%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.83875
+Train Epoch: 33   	 Loss: 0.317391	  lr : 0.000188 
+Train Epoch: 33   	 Loss: 0.327162	  lr : 0.000276 
+Train Epoch: 33   	 Loss: 0.331076	  lr : 0.000363 
+Train Epoch: 33   	 Loss: 0.328090	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 24980.0/32000.0 (78.062%)
+
+
+Test set on 2022 : Accuracy: 26337.0/32000.0 (82.303%)
+
+Train Epoch: 34   	 Loss: 0.350951	  lr : 0.000626 
+Train Epoch: 34   	 Loss: 0.350676	  lr : 0.000713 
+Train Epoch: 34   	 Loss: 0.379014	  lr : 0.000799 
+Train Epoch: 34   	 Loss: 0.348228	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 24569.0/32000.0 (76.778%)
+
+
+Test set on 2022 : Accuracy: 26529.0/32000.0 (82.903%)
+
+Train Epoch: 35   	 Loss: 0.356396	  lr : 0.000537 
+Train Epoch: 35   	 Loss: 0.341351	  lr : 0.000449 
+Train Epoch: 35   	 Loss: 0.343574	  lr : 0.000362 
+Train Epoch: 35   	 Loss: 0.330291	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26154.0/32000.0 (81.731%)
+
+
+Test set on 2022 : Accuracy: 26902.0/32000.0 (84.069%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84069
+Train Epoch: 36   	 Loss: 0.322204	  lr : 0.000101 
+Train Epoch: 36   	 Loss: 0.315395	  lr : 0.000188 
+Train Epoch: 36   	 Loss: 0.325764	  lr : 0.000276 
+Train Epoch: 36   	 Loss: 0.332302	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 25929.0/32000.0 (81.028%)
+
+
+Test set on 2022 : Accuracy: 26630.0/32000.0 (83.219%)
+
+Train Epoch: 37   	 Loss: 0.338635	  lr : 0.000538 
+Train Epoch: 37   	 Loss: 0.345028	  lr : 0.000626 
+Train Epoch: 37   	 Loss: 0.339073	  lr : 0.000713 
+Train Epoch: 37   	 Loss: 0.351219	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 25777.0/32000.0 (80.553%)
+
+
+Test set on 2022 : Accuracy: 26645.0/32000.0 (83.266%)
+
+Train Epoch: 38   	 Loss: 0.351578	  lr : 0.000624 
+Train Epoch: 38   	 Loss: 0.331196	  lr : 0.000537 
+Train Epoch: 38   	 Loss: 0.336592	  lr : 0.000449 
+Train Epoch: 38   	 Loss: 0.334474	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 25874.0/32000.0 (80.856%)
+
+
+Test set on 2022 : Accuracy: 26846.0/32000.0 (83.894%)
+
+Train Epoch: 39   	 Loss: 0.321430	  lr : 0.000187 
+Train Epoch: 39   	 Loss: 0.320103	  lr : 0.000101 
+Train Epoch: 39   	 Loss: 0.313905	  lr : 0.000188 
+Train Epoch: 39   	 Loss: 0.324826	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 25522.0/32000.0 (79.756%)
+
+
+Test set on 2022 : Accuracy: 26756.0/32000.0 (83.612%)
+
+Train Epoch: 40   	 Loss: 0.337641	  lr : 0.000451 
+Train Epoch: 40   	 Loss: 0.333627	  lr : 0.000538 
+Train Epoch: 40   	 Loss: 0.339078	  lr : 0.000626 
+Train Epoch: 40   	 Loss: 0.351524	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25042.0/32000.0 (78.256%)
+
+
+Test set on 2022 : Accuracy: 26254.0/32000.0 (82.044%)
+
+Train Epoch: 41   	 Loss: 0.352689	  lr : 0.000712 
+Train Epoch: 41   	 Loss: 0.330569	  lr : 0.000624 
+Train Epoch: 41   	 Loss: 0.344997	  lr : 0.000537 
+Train Epoch: 41   	 Loss: 0.337279	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 26033.0/32000.0 (81.353%)
+
+
+Test set on 2022 : Accuracy: 26779.0/32000.0 (83.684%)
+
+Train Epoch: 42   	 Loss: 0.324596	  lr : 0.000274 
+Train Epoch: 42   	 Loss: 0.316386	  lr : 0.000187 
+Train Epoch: 42   	 Loss: 0.318786	  lr : 0.000101 
+Train Epoch: 42   	 Loss: 0.318623	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 24538.0/32000.0 (76.681%)
+
+
+Test set on 2022 : Accuracy: 26536.0/32000.0 (82.925%)
+
+Train Epoch: 43   	 Loss: 0.318423	  lr : 0.000363 
+Train Epoch: 43   	 Loss: 0.324354	  lr : 0.000451 
+Train Epoch: 43   	 Loss: 0.335324	  lr : 0.000538 
+Train Epoch: 43   	 Loss: 0.333699	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 24982.0/32000.0 (78.069%)
+
+
+Test set on 2022 : Accuracy: 26453.0/32000.0 (82.666%)
+
+Train Epoch: 44   	 Loss: 0.353711	  lr : 0.000799 
+Train Epoch: 44   	 Loss: 0.352237	  lr : 0.000712 
+Train Epoch: 44   	 Loss: 0.346548	  lr : 0.000624 
+Train Epoch: 44   	 Loss: 0.327016	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26314.0/32000.0 (82.231%)
+
+
+Test set on 2022 : Accuracy: 26637.0/32000.0 (83.241%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.82231
+Train Epoch: 45   	 Loss: 0.341032	  lr : 0.000362 
+Train Epoch: 45   	 Loss: 0.318668	  lr : 0.000274 
+Train Epoch: 45   	 Loss: 0.306892	  lr : 0.000187 
+Train Epoch: 45   	 Loss: 0.311679	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26466.0/32000.0 (82.706%)
+
+
+Test set on 2022 : Accuracy: 26806.0/32000.0 (83.769%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.82706
+Train Epoch: 46   	 Loss: 0.316901	  lr : 0.000276 
+Train Epoch: 46   	 Loss: 0.318466	  lr : 0.000363 
+Train Epoch: 46   	 Loss: 0.324763	  lr : 0.000451 
+Train Epoch: 46   	 Loss: 0.323666	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26209.0/32000.0 (81.903%)
+
+
+Test set on 2022 : Accuracy: 26823.0/32000.0 (83.822%)
+
+Train Epoch: 47   	 Loss: 0.339670	  lr : 0.000713 
+Train Epoch: 47   	 Loss: 0.338727	  lr : 0.000799 
+Train Epoch: 47   	 Loss: 0.345696	  lr : 0.000712 
+Train Epoch: 47   	 Loss: 0.340730	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 25213.0/32000.0 (78.791%)
+
+
+Test set on 2022 : Accuracy: 26480.0/32000.0 (82.750%)
+
+Train Epoch: 48   	 Loss: 0.341867	  lr : 0.000449 
+Train Epoch: 48   	 Loss: 0.329320	  lr : 0.000362 
+Train Epoch: 48   	 Loss: 0.320137	  lr : 0.000274 
+Train Epoch: 48   	 Loss: 0.310618	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26201.0/32000.0 (81.878%)
+
+
+Test set on 2022 : Accuracy: 27014.0/32000.0 (84.419%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84419
+Train Epoch: 49   	 Loss: 0.310486	  lr : 0.000188 
+Train Epoch: 49   	 Loss: 0.313776	  lr : 0.000276 
+Train Epoch: 49   	 Loss: 0.318648	  lr : 0.000363 
+Train Epoch: 49   	 Loss: 0.317593	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 26018.0/32000.0 (81.306%)
+
+
+Test set on 2022 : Accuracy: 26898.0/32000.0 (84.056%)
+
+Train Epoch: 50   	 Loss: 0.318866	  lr : 0.000626 
+Train Epoch: 50   	 Loss: 0.341290	  lr : 0.000713 
+Train Epoch: 50   	 Loss: 0.343946	  lr : 0.000799 
+Train Epoch: 50   	 Loss: 0.344770	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 24627.0/32000.0 (76.959%)
+
+
+Test set on 2022 : Accuracy: 26278.0/32000.0 (82.119%)
+
+Train Epoch: 51   	 Loss: 0.346277	  lr : 0.000537 
+Train Epoch: 51   	 Loss: 0.355395	  lr : 0.000449 
+Train Epoch: 51   	 Loss: 0.316822	  lr : 0.000362 
+Train Epoch: 51   	 Loss: 0.314651	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 25931.0/32000.0 (81.034%)
+
+
+Test set on 2022 : Accuracy: 26939.0/32000.0 (84.184%)
+
+Train Epoch: 52   	 Loss: 0.320774	  lr : 0.000101 
+Train Epoch: 52   	 Loss: 0.311464	  lr : 0.000188 
+Train Epoch: 52   	 Loss: 0.327112	  lr : 0.000276 
+Train Epoch: 52   	 Loss: 0.317112	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 26052.0/32000.0 (81.412%)
+
+
+Test set on 2022 : Accuracy: 26758.0/32000.0 (83.619%)
+
+Train Epoch: 53   	 Loss: 0.331963	  lr : 0.000538 
+Train Epoch: 53   	 Loss: 0.336654	  lr : 0.000626 
+Train Epoch: 53   	 Loss: 0.326370	  lr : 0.000713 
+Train Epoch: 53   	 Loss: 0.333020	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 25754.0/32000.0 (80.481%)
+
+
+Test set on 2022 : Accuracy: 26425.0/32000.0 (82.578%)
+
+Train Epoch: 54   	 Loss: 0.334230	  lr : 0.000624 
+Train Epoch: 54   	 Loss: 0.329178	  lr : 0.000537 
+Train Epoch: 54   	 Loss: 0.323115	  lr : 0.000449 
+Train Epoch: 54   	 Loss: 0.319004	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26294.0/32000.0 (82.169%)
+
+
+Test set on 2022 : Accuracy: 26916.0/32000.0 (84.112%)
+
+Train Epoch: 55   	 Loss: 0.312670	  lr : 0.000187 
+Train Epoch: 55   	 Loss: 0.306125	  lr : 0.000101 
+Train Epoch: 55   	 Loss: 0.311034	  lr : 0.000188 
+Train Epoch: 55   	 Loss: 0.320038	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26286.0/32000.0 (82.144%)
+
+
+Test set on 2022 : Accuracy: 26890.0/32000.0 (84.031%)
+
+Train Epoch: 56   	 Loss: 0.325942	  lr : 0.000451 
+Train Epoch: 56   	 Loss: 0.327443	  lr : 0.000538 
+Train Epoch: 56   	 Loss: 0.324456	  lr : 0.000626 
+Train Epoch: 56   	 Loss: 0.327683	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25613.0/32000.0 (80.041%)
+
+
+Test set on 2022 : Accuracy: 25549.0/32000.0 (79.841%)
+
+Train Epoch: 57   	 Loss: 0.353932	  lr : 0.000712 
+Train Epoch: 57   	 Loss: 0.342760	  lr : 0.000624 
+Train Epoch: 57   	 Loss: 0.328595	  lr : 0.000537 
+Train Epoch: 57   	 Loss: 0.317250	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 25581.0/32000.0 (79.941%)
+
+
+Test set on 2022 : Accuracy: 26874.0/32000.0 (83.981%)
+
+Train Epoch: 58   	 Loss: 0.320359	  lr : 0.000274 
+Train Epoch: 58   	 Loss: 0.309074	  lr : 0.000187 
+Train Epoch: 58   	 Loss: 0.314771	  lr : 0.000101 
+Train Epoch: 58   	 Loss: 0.308093	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26226.0/32000.0 (81.956%)
+
+
+Test set on 2022 : Accuracy: 26986.0/32000.0 (84.331%)
+
+Train Epoch: 59   	 Loss: 0.316112	  lr : 0.000363 
+Train Epoch: 59   	 Loss: 0.319113	  lr : 0.000451 
+Train Epoch: 59   	 Loss: 0.318360	  lr : 0.000538 
+Train Epoch: 59   	 Loss: 0.336054	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 26124.0/32000.0 (81.638%)
+
+
+Test set on 2022 : Accuracy: 26727.0/32000.0 (83.522%)
+
+Train Epoch: 60   	 Loss: 0.358142	  lr : 0.000799 
+Train Epoch: 60   	 Loss: 0.333355	  lr : 0.000712 
+Train Epoch: 60   	 Loss: 0.316078	  lr : 0.000624 
+Train Epoch: 60   	 Loss: 0.318616	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26232.0/32000.0 (81.975%)
+
+
+Test set on 2022 : Accuracy: 26967.0/32000.0 (84.272%)
+
+Train Epoch: 61   	 Loss: 0.328395	  lr : 0.000362 
+Train Epoch: 61   	 Loss: 0.315233	  lr : 0.000274 
+Train Epoch: 61   	 Loss: 0.310937	  lr : 0.000187 
+Train Epoch: 61   	 Loss: 0.305950	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26417.0/32000.0 (82.553%)
+
+
+Test set on 2022 : Accuracy: 26947.0/32000.0 (84.209%)
+
+Train Epoch: 62   	 Loss: 0.303998	  lr : 0.000276 
+Train Epoch: 62   	 Loss: 0.315971	  lr : 0.000363 
+Train Epoch: 62   	 Loss: 0.327597	  lr : 0.000451 
+Train Epoch: 62   	 Loss: 0.319115	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26112.0/32000.0 (81.600%)
+
+
+Test set on 2022 : Accuracy: 27011.0/32000.0 (84.409%)
+
+Train Epoch: 63   	 Loss: 0.322477	  lr : 0.000713 
+Train Epoch: 63   	 Loss: 0.341436	  lr : 0.000799 
+Train Epoch: 63   	 Loss: 0.340106	  lr : 0.000712 
+Train Epoch: 63   	 Loss: 0.334500	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26146.0/32000.0 (81.706%)
+
+
+Test set on 2022 : Accuracy: 26978.0/32000.0 (84.306%)
+
+Train Epoch: 64   	 Loss: 0.313839	  lr : 0.000449 
+Train Epoch: 64   	 Loss: 0.323896	  lr : 0.000362 
+Train Epoch: 64   	 Loss: 0.320184	  lr : 0.000274 
+Train Epoch: 64   	 Loss: 0.305522	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26121.0/32000.0 (81.628%)
+
+
+Test set on 2022 : Accuracy: 27029.0/32000.0 (84.466%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84466
+Train Epoch: 65   	 Loss: 0.307554	  lr : 0.000188 
+Train Epoch: 65   	 Loss: 0.309798	  lr : 0.000276 
+Train Epoch: 65   	 Loss: 0.317034	  lr : 0.000363 
+Train Epoch: 65   	 Loss: 0.315873	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 26264.0/32000.0 (82.075%)
+
+
+Test set on 2022 : Accuracy: 26272.0/32000.0 (82.100%)
+
+Train Epoch: 66   	 Loss: 0.342448	  lr : 0.000626 
+Train Epoch: 66   	 Loss: 0.349510	  lr : 0.000713 
+Train Epoch: 66   	 Loss: 0.330307	  lr : 0.000799 
+Train Epoch: 66   	 Loss: 0.333349	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 25722.0/32000.0 (80.381%)
+
+
+Test set on 2022 : Accuracy: 26788.0/32000.0 (83.713%)
+
+Train Epoch: 67   	 Loss: 0.330059	  lr : 0.000537 
+Train Epoch: 67   	 Loss: 0.320736	  lr : 0.000449 
+Train Epoch: 67   	 Loss: 0.311811	  lr : 0.000362 
+Train Epoch: 67   	 Loss: 0.318104	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26364.0/32000.0 (82.388%)
+
+
+Test set on 2022 : Accuracy: 27009.0/32000.0 (84.403%)
+
+Train Epoch: 68   	 Loss: 0.306144	  lr : 0.000101 
+Train Epoch: 68   	 Loss: 0.305899	  lr : 0.000188 
+Train Epoch: 68   	 Loss: 0.301231	  lr : 0.000276 
+Train Epoch: 68   	 Loss: 0.312249	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 25648.0/32000.0 (80.150%)
+
+
+Test set on 2022 : Accuracy: 26760.0/32000.0 (83.625%)
+
+Train Epoch: 69   	 Loss: 0.319059	  lr : 0.000538 
+Train Epoch: 69   	 Loss: 0.323491	  lr : 0.000626 
+Train Epoch: 69   	 Loss: 0.340035	  lr : 0.000713 
+Train Epoch: 69   	 Loss: 0.332125	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 26035.0/32000.0 (81.359%)
+
+
+Test set on 2022 : Accuracy: 25682.0/32000.0 (80.256%)
+
+Train Epoch: 70   	 Loss: 0.327772	  lr : 0.000624 
+Train Epoch: 70   	 Loss: 0.329842	  lr : 0.000537 
+Train Epoch: 70   	 Loss: 0.320918	  lr : 0.000449 
+Train Epoch: 70   	 Loss: 0.328027	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26190.0/32000.0 (81.844%)
+
+
+Test set on 2022 : Accuracy: 27065.0/32000.0 (84.578%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84578
+Train Epoch: 71   	 Loss: 0.301936	  lr : 0.000187 
+Train Epoch: 71   	 Loss: 0.310521	  lr : 0.000101 
+Train Epoch: 71   	 Loss: 0.300716	  lr : 0.000188 
+Train Epoch: 71   	 Loss: 0.308154	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26134.0/32000.0 (81.669%)
+
+
+Test set on 2022 : Accuracy: 27002.0/32000.0 (84.381%)
+
+Train Epoch: 72   	 Loss: 0.316560	  lr : 0.000451 
+Train Epoch: 72   	 Loss: 0.324396	  lr : 0.000538 
+Train Epoch: 72   	 Loss: 0.314131	  lr : 0.000626 
+Train Epoch: 72   	 Loss: 0.320110	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25598.0/32000.0 (79.994%)
+
+
+Test set on 2022 : Accuracy: 26707.0/32000.0 (83.459%)
+
+Train Epoch: 73   	 Loss: 0.338437	  lr : 0.000712 
+Train Epoch: 73   	 Loss: 0.331790	  lr : 0.000624 
+Train Epoch: 73   	 Loss: 0.319190	  lr : 0.000537 
+Train Epoch: 73   	 Loss: 0.311734	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 25659.0/32000.0 (80.184%)
+
+
+Test set on 2022 : Accuracy: 26800.0/32000.0 (83.750%)
+
+Train Epoch: 74   	 Loss: 0.311659	  lr : 0.000274 
+Train Epoch: 74   	 Loss: 0.311221	  lr : 0.000187 
+Train Epoch: 74   	 Loss: 0.308924	  lr : 0.000101 
+Train Epoch: 74   	 Loss: 0.305350	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26044.0/32000.0 (81.388%)
+
+
+Test set on 2022 : Accuracy: 27075.0/32000.0 (84.609%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84609
+Train Epoch: 75   	 Loss: 0.312899	  lr : 0.000363 
+Train Epoch: 75   	 Loss: 0.309342	  lr : 0.000451 
+Train Epoch: 75   	 Loss: 0.309856	  lr : 0.000538 
+Train Epoch: 75   	 Loss: 0.315166	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 26412.0/32000.0 (82.537%)
+
+
+Test set on 2022 : Accuracy: 26900.0/32000.0 (84.062%)
+
+Train Epoch: 76   	 Loss: 0.340018	  lr : 0.000799 
+Train Epoch: 76   	 Loss: 0.322900	  lr : 0.000712 
+Train Epoch: 76   	 Loss: 0.327593	  lr : 0.000624 
+Train Epoch: 76   	 Loss: 0.316155	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26145.0/32000.0 (81.703%)
+
+
+Test set on 2022 : Accuracy: 27032.0/32000.0 (84.475%)
+
+Train Epoch: 77   	 Loss: 0.325753	  lr : 0.000362 
+Train Epoch: 77   	 Loss: 0.311363	  lr : 0.000274 
+Train Epoch: 77   	 Loss: 0.319698	  lr : 0.000187 
+Train Epoch: 77   	 Loss: 0.296869	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26064.0/32000.0 (81.450%)
+
+
+Test set on 2022 : Accuracy: 27067.0/32000.0 (84.584%)
+
+Train Epoch: 78   	 Loss: 0.309876	  lr : 0.000276 
+Train Epoch: 78   	 Loss: 0.305892	  lr : 0.000363 
+Train Epoch: 78   	 Loss: 0.310265	  lr : 0.000451 
+Train Epoch: 78   	 Loss: 0.313092	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26137.0/32000.0 (81.678%)
+
+
+Test set on 2022 : Accuracy: 26922.0/32000.0 (84.131%)
+
+Train Epoch: 79   	 Loss: 0.323934	  lr : 0.000713 
+Train Epoch: 79   	 Loss: 0.332657	  lr : 0.000799 
+Train Epoch: 79   	 Loss: 0.334387	  lr : 0.000712 
+Train Epoch: 79   	 Loss: 0.319538	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26292.0/32000.0 (82.162%)
+
+
+Test set on 2022 : Accuracy: 26336.0/32000.0 (82.300%)
+
+Train Epoch: 80   	 Loss: 0.321282	  lr : 0.000449 
+Train Epoch: 80   	 Loss: 0.317398	  lr : 0.000362 
+Train Epoch: 80   	 Loss: 0.299354	  lr : 0.000274 
+Train Epoch: 80   	 Loss: 0.305938	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 25778.0/32000.0 (80.556%)
+
+
+Test set on 2022 : Accuracy: 27041.0/32000.0 (84.503%)
+
+Train Epoch: 81   	 Loss: 0.307978	  lr : 0.000188 
+Train Epoch: 81   	 Loss: 0.300728	  lr : 0.000276 
+Train Epoch: 81   	 Loss: 0.303226	  lr : 0.000363 
+Train Epoch: 81   	 Loss: 0.312862	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 26336.0/32000.0 (82.300%)
+
+
+Test set on 2022 : Accuracy: 26701.0/32000.0 (83.441%)
+
+Train Epoch: 82   	 Loss: 0.322919	  lr : 0.000626 
+Train Epoch: 82   	 Loss: 0.313407	  lr : 0.000713 
+Train Epoch: 82   	 Loss: 0.333082	  lr : 0.000799 
+Train Epoch: 82   	 Loss: 0.326515	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 25128.0/32000.0 (78.525%)
+
+
+Test set on 2022 : Accuracy: 26404.0/32000.0 (82.513%)
+
+Train Epoch: 83   	 Loss: 0.322603	  lr : 0.000537 
+Train Epoch: 83   	 Loss: 0.317868	  lr : 0.000449 
+Train Epoch: 83   	 Loss: 0.312095	  lr : 0.000362 
+Train Epoch: 83   	 Loss: 0.310456	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26174.0/32000.0 (81.794%)
+
+
+Test set on 2022 : Accuracy: 27132.0/32000.0 (84.787%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84788
+Train Epoch: 84   	 Loss: 0.297741	  lr : 0.000101 
+Train Epoch: 84   	 Loss: 0.303081	  lr : 0.000188 
+Train Epoch: 84   	 Loss: 0.303875	  lr : 0.000276 
+Train Epoch: 84   	 Loss: 0.301392	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 25364.0/32000.0 (79.263%)
+
+
+Test set on 2022 : Accuracy: 26679.0/32000.0 (83.372%)
+
+Train Epoch: 85   	 Loss: 0.324483	  lr : 0.000538 
+Train Epoch: 85   	 Loss: 0.322047	  lr : 0.000626 
+Train Epoch: 85   	 Loss: 0.323024	  lr : 0.000713 
+Train Epoch: 85   	 Loss: 0.322918	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 26230.0/32000.0 (81.969%)
+
+
+Test set on 2022 : Accuracy: 27037.0/32000.0 (84.491%)
+
+Train Epoch: 86   	 Loss: 0.329149	  lr : 0.000624 
+Train Epoch: 86   	 Loss: 0.322462	  lr : 0.000537 
+Train Epoch: 86   	 Loss: 0.314643	  lr : 0.000449 
+Train Epoch: 86   	 Loss: 0.306481	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26151.0/32000.0 (81.722%)
+
+
+Test set on 2022 : Accuracy: 27051.0/32000.0 (84.534%)
+
+Train Epoch: 87   	 Loss: 0.306028	  lr : 0.000187 
+Train Epoch: 87   	 Loss: 0.306857	  lr : 0.000101 
+Train Epoch: 87   	 Loss: 0.294579	  lr : 0.000188 
+Train Epoch: 87   	 Loss: 0.296432	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26306.0/32000.0 (82.206%)
+
+
+Test set on 2022 : Accuracy: 27154.0/32000.0 (84.856%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.84856
+Train Epoch: 88   	 Loss: 0.306474	  lr : 0.000451 
+Train Epoch: 88   	 Loss: 0.318030	  lr : 0.000538 
+Train Epoch: 88   	 Loss: 0.317516	  lr : 0.000626 
+Train Epoch: 88   	 Loss: 0.316223	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 26119.0/32000.0 (81.622%)
+
+
+Test set on 2022 : Accuracy: 26048.0/32000.0 (81.400%)
+
+Train Epoch: 89   	 Loss: 0.319657	  lr : 0.000712 
+Train Epoch: 89   	 Loss: 0.321856	  lr : 0.000624 
+Train Epoch: 89   	 Loss: 0.330012	  lr : 0.000537 
+Train Epoch: 89   	 Loss: 0.311480	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 26367.0/32000.0 (82.397%)
+
+
+Test set on 2022 : Accuracy: 27030.0/32000.0 (84.469%)
+
+Train Epoch: 90   	 Loss: 0.304322	  lr : 0.000274 
+Train Epoch: 90   	 Loss: 0.298126	  lr : 0.000187 
+Train Epoch: 90   	 Loss: 0.293661	  lr : 0.000101 
+Train Epoch: 90   	 Loss: 0.301400	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26526.0/32000.0 (82.894%)
+
+
+Test set on 2022 : Accuracy: 27044.0/32000.0 (84.513%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.82894
+Train Epoch: 91   	 Loss: 0.298587	  lr : 0.000363 
+Train Epoch: 91   	 Loss: 0.309072	  lr : 0.000451 
+Train Epoch: 91   	 Loss: 0.306581	  lr : 0.000538 
+Train Epoch: 91   	 Loss: 0.316978	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 26000.0/32000.0 (81.250%)
+
+
+Test set on 2022 : Accuracy: 26959.0/32000.0 (84.247%)
+
+Train Epoch: 92   	 Loss: 0.324597	  lr : 0.000799 
+Train Epoch: 92   	 Loss: 0.320079	  lr : 0.000712 
+Train Epoch: 92   	 Loss: 0.318506	  lr : 0.000624 
+Train Epoch: 92   	 Loss: 0.314919	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 25970.0/32000.0 (81.156%)
+
+
+Test set on 2022 : Accuracy: 27038.0/32000.0 (84.494%)
+
+Train Epoch: 93   	 Loss: 0.309345	  lr : 0.000362 
+Train Epoch: 93   	 Loss: 0.305227	  lr : 0.000274 
+Train Epoch: 93   	 Loss: 0.300261	  lr : 0.000187 
+Train Epoch: 93   	 Loss: 0.304609	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26629.0/32000.0 (83.216%)
+
+
+Test set on 2022 : Accuracy: 26941.0/32000.0 (84.191%)
+
+########################### Saved 2018 best model. the highest Accuracy on 2018 :0.83216
+Train Epoch: 94   	 Loss: 0.309587	  lr : 0.000276 
+Train Epoch: 94   	 Loss: 0.303237	  lr : 0.000363 
+Train Epoch: 94   	 Loss: 0.311097	  lr : 0.000451 
+Train Epoch: 94   	 Loss: 0.322075	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 25824.0/32000.0 (80.700%)
+
+
+Test set on 2022 : Accuracy: 26831.0/32000.0 (83.847%)
+
+Train Epoch: 95   	 Loss: 0.314683	  lr : 0.000713 
+Train Epoch: 95   	 Loss: 0.322955	  lr : 0.000799 
+Train Epoch: 95   	 Loss: 0.312815	  lr : 0.000712 
+Train Epoch: 95   	 Loss: 0.332271	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26470.0/32000.0 (82.719%)
+
+
+Test set on 2022 : Accuracy: 26881.0/32000.0 (84.003%)
+
+Train Epoch: 96   	 Loss: 0.320797	  lr : 0.000449 
+Train Epoch: 96   	 Loss: 0.299705	  lr : 0.000362 
+Train Epoch: 96   	 Loss: 0.314335	  lr : 0.000274 
+Train Epoch: 96   	 Loss: 0.302257	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26243.0/32000.0 (82.009%)
+
+
+Test set on 2022 : Accuracy: 27202.0/32000.0 (85.006%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85006
+Train Epoch: 97   	 Loss: 0.302485	  lr : 0.000188 
+Train Epoch: 97   	 Loss: 0.295444	  lr : 0.000276 
+Train Epoch: 97   	 Loss: 0.310317	  lr : 0.000363 
+Train Epoch: 97   	 Loss: 0.298601	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 26345.0/32000.0 (82.328%)
+
+
+Test set on 2022 : Accuracy: 27081.0/32000.0 (84.628%)
+
+Train Epoch: 98   	 Loss: 0.313731	  lr : 0.000626 
+Train Epoch: 98   	 Loss: 0.322400	  lr : 0.000713 
+Train Epoch: 98   	 Loss: 0.327422	  lr : 0.000799 
+Train Epoch: 98   	 Loss: 0.321914	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 26141.0/32000.0 (81.691%)
+
+
+Test set on 2022 : Accuracy: 27147.0/32000.0 (84.834%)
+
+Train Epoch: 99   	 Loss: 0.329288	  lr : 0.000537 
+Train Epoch: 99   	 Loss: 0.309290	  lr : 0.000449 
+Train Epoch: 99   	 Loss: 0.304293	  lr : 0.000362 
+Train Epoch: 99   	 Loss: 0.308327	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26290.0/32000.0 (82.156%)
+
+
+Test set on 2022 : Accuracy: 27184.0/32000.0 (84.950%)
+
+Train Epoch: 100   	 Loss: 0.291218	  lr : 0.000101 
+Train Epoch: 100   	 Loss: 0.292726	  lr : 0.000188 
+Train Epoch: 100   	 Loss: 0.303500	  lr : 0.000276 
+Train Epoch: 100   	 Loss: 0.300025	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 26442.0/32000.0 (82.631%)
+
+
+Test set on 2022 : Accuracy: 26801.0/32000.0 (83.753%)
+
+Train Epoch: 101   	 Loss: 0.307448	  lr : 0.000538 
+Train Epoch: 101   	 Loss: 0.310189	  lr : 0.000626 
+Train Epoch: 101   	 Loss: 0.315056	  lr : 0.000713 
+Train Epoch: 101   	 Loss: 0.317370	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 25841.0/32000.0 (80.753%)
+
+
+Test set on 2022 : Accuracy: 27044.0/32000.0 (84.513%)
+
+Train Epoch: 102   	 Loss: 0.316089	  lr : 0.000624 
+Train Epoch: 102   	 Loss: 0.311520	  lr : 0.000537 
+Train Epoch: 102   	 Loss: 0.308279	  lr : 0.000449 
+Train Epoch: 102   	 Loss: 0.317592	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26401.0/32000.0 (82.503%)
+
+
+Test set on 2022 : Accuracy: 27117.0/32000.0 (84.741%)
+
+Train Epoch: 103   	 Loss: 0.299086	  lr : 0.000187 
+Train Epoch: 103   	 Loss: 0.304477	  lr : 0.000101 
+Train Epoch: 103   	 Loss: 0.294823	  lr : 0.000188 
+Train Epoch: 103   	 Loss: 0.290145	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26157.0/32000.0 (81.741%)
+
+
+Test set on 2022 : Accuracy: 27167.0/32000.0 (84.897%)
+
+Train Epoch: 104   	 Loss: 0.309163	  lr : 0.000451 
+Train Epoch: 104   	 Loss: 0.302909	  lr : 0.000538 
+Train Epoch: 104   	 Loss: 0.327240	  lr : 0.000626 
+Train Epoch: 104   	 Loss: 0.315181	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25224.0/32000.0 (78.825%)
+
+
+Test set on 2022 : Accuracy: 26612.0/32000.0 (83.162%)
+
+Train Epoch: 105   	 Loss: 0.308662	  lr : 0.000712 
+Train Epoch: 105   	 Loss: 0.310636	  lr : 0.000624 
+Train Epoch: 105   	 Loss: 0.318066	  lr : 0.000537 
+Train Epoch: 105   	 Loss: 0.315026	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 26479.0/32000.0 (82.747%)
+
+
+Test set on 2022 : Accuracy: 26861.0/32000.0 (83.941%)
+
+Train Epoch: 106   	 Loss: 0.304825	  lr : 0.000274 
+Train Epoch: 106   	 Loss: 0.291622	  lr : 0.000187 
+Train Epoch: 106   	 Loss: 0.289980	  lr : 0.000101 
+Train Epoch: 106   	 Loss: 0.294155	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26317.0/32000.0 (82.241%)
+
+
+Test set on 2022 : Accuracy: 27282.0/32000.0 (85.256%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85256
+Train Epoch: 107   	 Loss: 0.298087	  lr : 0.000363 
+Train Epoch: 107   	 Loss: 0.306554	  lr : 0.000451 
+Train Epoch: 107   	 Loss: 0.312323	  lr : 0.000538 
+Train Epoch: 107   	 Loss: 0.318464	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 26095.0/32000.0 (81.547%)
+
+
+Test set on 2022 : Accuracy: 26524.0/32000.0 (82.888%)
+
+Train Epoch: 108   	 Loss: 0.341512	  lr : 0.000799 
+Train Epoch: 108   	 Loss: 0.322249	  lr : 0.000712 
+Train Epoch: 108   	 Loss: 0.311062	  lr : 0.000624 
+Train Epoch: 108   	 Loss: 0.305219	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26017.0/32000.0 (81.303%)
+
+
+Test set on 2022 : Accuracy: 27101.0/32000.0 (84.691%)
+
+Train Epoch: 109   	 Loss: 0.324296	  lr : 0.000362 
+Train Epoch: 109   	 Loss: 0.291742	  lr : 0.000274 
+Train Epoch: 109   	 Loss: 0.300629	  lr : 0.000187 
+Train Epoch: 109   	 Loss: 0.287851	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26525.0/32000.0 (82.891%)
+
+
+Test set on 2022 : Accuracy: 27112.0/32000.0 (84.725%)
+
+Train Epoch: 110   	 Loss: 0.294215	  lr : 0.000276 
+Train Epoch: 110   	 Loss: 0.300032	  lr : 0.000363 
+Train Epoch: 110   	 Loss: 0.305362	  lr : 0.000451 
+Train Epoch: 110   	 Loss: 0.303775	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26443.0/32000.0 (82.634%)
+
+
+Test set on 2022 : Accuracy: 26657.0/32000.0 (83.303%)
+
+Train Epoch: 111   	 Loss: 0.313571	  lr : 0.000713 
+Train Epoch: 111   	 Loss: 0.308042	  lr : 0.000799 
+Train Epoch: 111   	 Loss: 0.306731	  lr : 0.000712 
+Train Epoch: 111   	 Loss: 0.321195	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26114.0/32000.0 (81.606%)
+
+
+Test set on 2022 : Accuracy: 27120.0/32000.0 (84.750%)
+
+Train Epoch: 112   	 Loss: 0.311320	  lr : 0.000449 
+Train Epoch: 112   	 Loss: 0.296885	  lr : 0.000362 
+Train Epoch: 112   	 Loss: 0.307340	  lr : 0.000274 
+Train Epoch: 112   	 Loss: 0.298666	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26094.0/32000.0 (81.544%)
+
+
+Test set on 2022 : Accuracy: 27242.0/32000.0 (85.131%)
+
+Train Epoch: 113   	 Loss: 0.292518	  lr : 0.000188 
+Train Epoch: 113   	 Loss: 0.293757	  lr : 0.000276 
+Train Epoch: 113   	 Loss: 0.308353	  lr : 0.000363 
+Train Epoch: 113   	 Loss: 0.312294	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 25925.0/32000.0 (81.016%)
+
+
+Test set on 2022 : Accuracy: 27011.0/32000.0 (84.409%)
+
+Train Epoch: 114   	 Loss: 0.306988	  lr : 0.000626 
+Train Epoch: 114   	 Loss: 0.301630	  lr : 0.000713 
+Train Epoch: 114   	 Loss: 0.327264	  lr : 0.000799 
+Train Epoch: 114   	 Loss: 0.309503	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 25195.0/32000.0 (78.734%)
+
+
+Test set on 2022 : Accuracy: 26660.0/32000.0 (83.312%)
+
+Train Epoch: 115   	 Loss: 0.316115	  lr : 0.000537 
+Train Epoch: 115   	 Loss: 0.310352	  lr : 0.000449 
+Train Epoch: 115   	 Loss: 0.302860	  lr : 0.000362 
+Train Epoch: 115   	 Loss: 0.299315	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26421.0/32000.0 (82.566%)
+
+
+Test set on 2022 : Accuracy: 27201.0/32000.0 (85.003%)
+
+Train Epoch: 116   	 Loss: 0.299421	  lr : 0.000101 
+Train Epoch: 116   	 Loss: 0.291842	  lr : 0.000188 
+Train Epoch: 116   	 Loss: 0.293519	  lr : 0.000276 
+Train Epoch: 116   	 Loss: 0.293329	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 26084.0/32000.0 (81.513%)
+
+
+Test set on 2022 : Accuracy: 26446.0/32000.0 (82.644%)
+
+Train Epoch: 117   	 Loss: 0.319692	  lr : 0.000538 
+Train Epoch: 117   	 Loss: 0.300450	  lr : 0.000626 
+Train Epoch: 117   	 Loss: 0.325269	  lr : 0.000713 
+Train Epoch: 117   	 Loss: 0.308418	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 26399.0/32000.0 (82.497%)
+
+
+Test set on 2022 : Accuracy: 26998.0/32000.0 (84.369%)
+
+Train Epoch: 118   	 Loss: 0.308281	  lr : 0.000624 
+Train Epoch: 118   	 Loss: 0.308475	  lr : 0.000537 
+Train Epoch: 118   	 Loss: 0.311688	  lr : 0.000449 
+Train Epoch: 118   	 Loss: 0.304477	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26232.0/32000.0 (81.975%)
+
+
+Test set on 2022 : Accuracy: 26526.0/32000.0 (82.894%)
+
+Train Epoch: 119   	 Loss: 0.308453	  lr : 0.000187 
+Train Epoch: 119   	 Loss: 0.289600	  lr : 0.000101 
+Train Epoch: 119   	 Loss: 0.290870	  lr : 0.000188 
+Train Epoch: 119   	 Loss: 0.291621	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26417.0/32000.0 (82.553%)
+
+
+Test set on 2022 : Accuracy: 27000.0/32000.0 (84.375%)
+
+Train Epoch: 120   	 Loss: 0.312193	  lr : 0.000451 
+Train Epoch: 120   	 Loss: 0.301656	  lr : 0.000538 
+Train Epoch: 120   	 Loss: 0.300499	  lr : 0.000626 
+Train Epoch: 120   	 Loss: 0.311327	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25064.0/32000.0 (78.325%)
+
+
+Test set on 2022 : Accuracy: 26438.0/32000.0 (82.619%)
+
+Train Epoch: 121   	 Loss: 0.324961	  lr : 0.000712 
+Train Epoch: 121   	 Loss: 0.297927	  lr : 0.000624 
+Train Epoch: 121   	 Loss: 0.304595	  lr : 0.000537 
+Train Epoch: 121   	 Loss: 0.319076	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 26404.0/32000.0 (82.513%)
+
+
+Test set on 2022 : Accuracy: 27279.0/32000.0 (85.247%)
+
+Train Epoch: 122   	 Loss: 0.295757	  lr : 0.000274 
+Train Epoch: 122   	 Loss: 0.293922	  lr : 0.000187 
+Train Epoch: 122   	 Loss: 0.291850	  lr : 0.000101 
+Train Epoch: 122   	 Loss: 0.287940	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26480.0/32000.0 (82.750%)
+
+
+Test set on 2022 : Accuracy: 27247.0/32000.0 (85.147%)
+
+Train Epoch: 123   	 Loss: 0.302681	  lr : 0.000363 
+Train Epoch: 123   	 Loss: 0.295147	  lr : 0.000451 
+Train Epoch: 123   	 Loss: 0.311822	  lr : 0.000538 
+Train Epoch: 123   	 Loss: 0.314475	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 25796.0/32000.0 (80.612%)
+
+
+Test set on 2022 : Accuracy: 26609.0/32000.0 (83.153%)
+
+Train Epoch: 124   	 Loss: 0.320487	  lr : 0.000799 
+Train Epoch: 124   	 Loss: 0.317742	  lr : 0.000712 
+Train Epoch: 124   	 Loss: 0.310247	  lr : 0.000624 
+Train Epoch: 124   	 Loss: 0.321175	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26433.0/32000.0 (82.603%)
+
+
+Test set on 2022 : Accuracy: 27243.0/32000.0 (85.134%)
+
+Train Epoch: 125   	 Loss: 0.300045	  lr : 0.000362 
+Train Epoch: 125   	 Loss: 0.304290	  lr : 0.000274 
+Train Epoch: 125   	 Loss: 0.291902	  lr : 0.000187 
+Train Epoch: 125   	 Loss: 0.292404	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 25701.0/32000.0 (80.316%)
+
+
+Test set on 2022 : Accuracy: 27266.0/32000.0 (85.206%)
+
+Train Epoch: 126   	 Loss: 0.292766	  lr : 0.000276 
+Train Epoch: 126   	 Loss: 0.290394	  lr : 0.000363 
+Train Epoch: 126   	 Loss: 0.293769	  lr : 0.000451 
+Train Epoch: 126   	 Loss: 0.314514	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26364.0/32000.0 (82.388%)
+
+
+Test set on 2022 : Accuracy: 27227.0/32000.0 (85.084%)
+
+Train Epoch: 127   	 Loss: 0.302472	  lr : 0.000713 
+Train Epoch: 127   	 Loss: 0.310736	  lr : 0.000799 
+Train Epoch: 127   	 Loss: 0.309758	  lr : 0.000712 
+Train Epoch: 127   	 Loss: 0.310422	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 25984.0/32000.0 (81.200%)
+
+
+Test set on 2022 : Accuracy: 27263.0/32000.0 (85.197%)
+
+Train Epoch: 128   	 Loss: 0.303800	  lr : 0.000449 
+Train Epoch: 128   	 Loss: 0.306506	  lr : 0.000362 
+Train Epoch: 128   	 Loss: 0.302429	  lr : 0.000274 
+Train Epoch: 128   	 Loss: 0.280589	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26426.0/32000.0 (82.581%)
+
+
+Test set on 2022 : Accuracy: 27307.0/32000.0 (85.334%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85334
+Train Epoch: 129   	 Loss: 0.289298	  lr : 0.000188 
+Train Epoch: 129   	 Loss: 0.290591	  lr : 0.000276 
+Train Epoch: 129   	 Loss: 0.295237	  lr : 0.000363 
+Train Epoch: 129   	 Loss: 0.302388	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 25424.0/32000.0 (79.450%)
+
+
+Test set on 2022 : Accuracy: 27022.0/32000.0 (84.444%)
+
+Train Epoch: 130   	 Loss: 0.308670	  lr : 0.000626 
+Train Epoch: 130   	 Loss: 0.315002	  lr : 0.000713 
+Train Epoch: 130   	 Loss: 0.329274	  lr : 0.000799 
+Train Epoch: 130   	 Loss: 0.311196	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 26108.0/32000.0 (81.588%)
+
+
+Test set on 2022 : Accuracy: 27231.0/32000.0 (85.097%)
+
+Train Epoch: 131   	 Loss: 0.298008	  lr : 0.000537 
+Train Epoch: 131   	 Loss: 0.310326	  lr : 0.000449 
+Train Epoch: 131   	 Loss: 0.309376	  lr : 0.000362 
+Train Epoch: 131   	 Loss: 0.304353	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26250.0/32000.0 (82.031%)
+
+
+Test set on 2022 : Accuracy: 27377.0/32000.0 (85.553%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85553
+Train Epoch: 132   	 Loss: 0.283909	  lr : 0.000101 
+Train Epoch: 132   	 Loss: 0.291284	  lr : 0.000188 
+Train Epoch: 132   	 Loss: 0.292904	  lr : 0.000276 
+Train Epoch: 132   	 Loss: 0.292335	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 26167.0/32000.0 (81.772%)
+
+
+Test set on 2022 : Accuracy: 26882.0/32000.0 (84.006%)
+
+Train Epoch: 133   	 Loss: 0.312039	  lr : 0.000538 
+Train Epoch: 133   	 Loss: 0.309180	  lr : 0.000626 
+Train Epoch: 133   	 Loss: 0.308009	  lr : 0.000713 
+Train Epoch: 133   	 Loss: 0.303116	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 25904.0/32000.0 (80.950%)
+
+
+Test set on 2022 : Accuracy: 27045.0/32000.0 (84.516%)
+
+Train Epoch: 134   	 Loss: 0.305201	  lr : 0.000624 
+Train Epoch: 134   	 Loss: 0.312142	  lr : 0.000537 
+Train Epoch: 134   	 Loss: 0.298350	  lr : 0.000449 
+Train Epoch: 134   	 Loss: 0.300432	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26436.0/32000.0 (82.612%)
+
+
+Test set on 2022 : Accuracy: 27234.0/32000.0 (85.106%)
+
+Train Epoch: 135   	 Loss: 0.285723	  lr : 0.000187 
+Train Epoch: 135   	 Loss: 0.294266	  lr : 0.000101 
+Train Epoch: 135   	 Loss: 0.283797	  lr : 0.000188 
+Train Epoch: 135   	 Loss: 0.290261	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 26294.0/32000.0 (82.169%)
+
+
+Test set on 2022 : Accuracy: 27404.0/32000.0 (85.638%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85637
+Train Epoch: 136   	 Loss: 0.289118	  lr : 0.000451 
+Train Epoch: 136   	 Loss: 0.298566	  lr : 0.000538 
+Train Epoch: 136   	 Loss: 0.317583	  lr : 0.000626 
+Train Epoch: 136   	 Loss: 0.313608	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 25977.0/32000.0 (81.178%)
+
+
+Test set on 2022 : Accuracy: 27042.0/32000.0 (84.506%)
+
+Train Epoch: 137   	 Loss: 0.312401	  lr : 0.000712 
+Train Epoch: 137   	 Loss: 0.314201	  lr : 0.000624 
+Train Epoch: 137   	 Loss: 0.310533	  lr : 0.000537 
+Train Epoch: 137   	 Loss: 0.295255	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 25833.0/32000.0 (80.728%)
+
+
+Test set on 2022 : Accuracy: 27109.0/32000.0 (84.716%)
+
+Train Epoch: 138   	 Loss: 0.303565	  lr : 0.000274 
+Train Epoch: 138   	 Loss: 0.289400	  lr : 0.000187 
+Train Epoch: 138   	 Loss: 0.281993	  lr : 0.000101 
+Train Epoch: 138   	 Loss: 0.286051	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26422.0/32000.0 (82.569%)
+
+
+Test set on 2022 : Accuracy: 27391.0/32000.0 (85.597%)
+
+Train Epoch: 139   	 Loss: 0.294327	  lr : 0.000363 
+Train Epoch: 139   	 Loss: 0.306484	  lr : 0.000451 
+Train Epoch: 139   	 Loss: 0.291269	  lr : 0.000538 
+Train Epoch: 139   	 Loss: 0.296367	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 25092.0/32000.0 (78.412%)
+
+
+Test set on 2022 : Accuracy: 27063.0/32000.0 (84.572%)
+
+Train Epoch: 140   	 Loss: 0.311898	  lr : 0.000799 
+Train Epoch: 140   	 Loss: 0.303501	  lr : 0.000712 
+Train Epoch: 140   	 Loss: 0.307926	  lr : 0.000624 
+Train Epoch: 140   	 Loss: 0.298508	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26495.0/32000.0 (82.797%)
+
+
+Test set on 2022 : Accuracy: 26855.0/32000.0 (83.922%)
+
+Train Epoch: 141   	 Loss: 0.293802	  lr : 0.000362 
+Train Epoch: 141   	 Loss: 0.292831	  lr : 0.000274 
+Train Epoch: 141   	 Loss: 0.295152	  lr : 0.000187 
+Train Epoch: 141   	 Loss: 0.283805	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26185.0/32000.0 (81.828%)
+
+
+Test set on 2022 : Accuracy: 27357.0/32000.0 (85.491%)
+
+Train Epoch: 142   	 Loss: 0.285457	  lr : 0.000276 
+Train Epoch: 142   	 Loss: 0.292098	  lr : 0.000363 
+Train Epoch: 142   	 Loss: 0.303424	  lr : 0.000451 
+Train Epoch: 142   	 Loss: 0.304512	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 26009.0/32000.0 (81.278%)
+
+
+Test set on 2022 : Accuracy: 27305.0/32000.0 (85.328%)
+
+Train Epoch: 143   	 Loss: 0.307252	  lr : 0.000713 
+Train Epoch: 143   	 Loss: 0.302091	  lr : 0.000799 
+Train Epoch: 143   	 Loss: 0.320112	  lr : 0.000712 
+Train Epoch: 143   	 Loss: 0.301973	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26205.0/32000.0 (81.891%)
+
+
+Test set on 2022 : Accuracy: 27242.0/32000.0 (85.131%)
+
+Train Epoch: 144   	 Loss: 0.307249	  lr : 0.000449 
+Train Epoch: 144   	 Loss: 0.296495	  lr : 0.000362 
+Train Epoch: 144   	 Loss: 0.281903	  lr : 0.000274 
+Train Epoch: 144   	 Loss: 0.286511	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26365.0/32000.0 (82.391%)
+
+
+Test set on 2022 : Accuracy: 27415.0/32000.0 (85.672%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85672
+Train Epoch: 145   	 Loss: 0.287437	  lr : 0.000188 
+Train Epoch: 145   	 Loss: 0.286248	  lr : 0.000276 
+Train Epoch: 145   	 Loss: 0.285552	  lr : 0.000363 
+Train Epoch: 145   	 Loss: 0.293922	  lr : 0.000451 
+
+Test set on 2018 : Accuracy: 26404.0/32000.0 (82.513%)
+
+
+Test set on 2022 : Accuracy: 27193.0/32000.0 (84.978%)
+
+Train Epoch: 146   	 Loss: 0.304486	  lr : 0.000626 
+Train Epoch: 146   	 Loss: 0.303263	  lr : 0.000713 
+Train Epoch: 146   	 Loss: 0.317089	  lr : 0.000799 
+Train Epoch: 146   	 Loss: 0.301135	  lr : 0.000712 
+
+Test set on 2018 : Accuracy: 26134.0/32000.0 (81.669%)
+
+
+Test set on 2022 : Accuracy: 27207.0/32000.0 (85.022%)
+
+Train Epoch: 147   	 Loss: 0.298496	  lr : 0.000537 
+Train Epoch: 147   	 Loss: 0.304229	  lr : 0.000449 
+Train Epoch: 147   	 Loss: 0.288724	  lr : 0.000362 
+Train Epoch: 147   	 Loss: 0.290348	  lr : 0.000274 
+
+Test set on 2018 : Accuracy: 26498.0/32000.0 (82.806%)
+
+
+Test set on 2022 : Accuracy: 27393.0/32000.0 (85.603%)
+
+Train Epoch: 148   	 Loss: 0.289633	  lr : 0.000101 
+Train Epoch: 148   	 Loss: 0.280139	  lr : 0.000188 
+Train Epoch: 148   	 Loss: 0.280443	  lr : 0.000276 
+Train Epoch: 148   	 Loss: 0.291100	  lr : 0.000363 
+
+Test set on 2018 : Accuracy: 26347.0/32000.0 (82.334%)
+
+
+Test set on 2022 : Accuracy: 27255.0/32000.0 (85.172%)
+
+Train Epoch: 149   	 Loss: 0.295501	  lr : 0.000538 
+Train Epoch: 149   	 Loss: 0.296542	  lr : 0.000626 
+Train Epoch: 149   	 Loss: 0.308535	  lr : 0.000713 
+Train Epoch: 149   	 Loss: 0.310677	  lr : 0.000799 
+
+Test set on 2018 : Accuracy: 26064.0/32000.0 (81.450%)
+
+
+Test set on 2022 : Accuracy: 27387.0/32000.0 (85.584%)
+
+Train Epoch: 150   	 Loss: 0.306524	  lr : 0.000624 
+Train Epoch: 150   	 Loss: 0.297604	  lr : 0.000537 
+Train Epoch: 150   	 Loss: 0.293424	  lr : 0.000449 
+Train Epoch: 150   	 Loss: 0.312080	  lr : 0.000362 
+
+Test set on 2018 : Accuracy: 26296.0/32000.0 (82.175%)
+
+
+Test set on 2022 : Accuracy: 27432.0/32000.0 (85.725%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85725
+Train Epoch: 151   	 Loss: 0.285941	  lr : 0.000187 
+Train Epoch: 151   	 Loss: 0.287789	  lr : 0.000101 
+Train Epoch: 151   	 Loss: 0.274312	  lr : 0.000188 
+Train Epoch: 151   	 Loss: 0.284147	  lr : 0.000276 
+
+Test set on 2018 : Accuracy: 25980.0/32000.0 (81.188%)
+
+
+Test set on 2022 : Accuracy: 27488.0/32000.0 (85.900%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.85900
+Train Epoch: 152   	 Loss: 0.284510	  lr : 0.000451 
+Train Epoch: 152   	 Loss: 0.296020	  lr : 0.000538 
+Train Epoch: 152   	 Loss: 0.290147	  lr : 0.000626 
+Train Epoch: 152   	 Loss: 0.307990	  lr : 0.000713 
+
+Test set on 2018 : Accuracy: 26108.0/32000.0 (81.588%)
+
+
+Test set on 2022 : Accuracy: 27104.0/32000.0 (84.700%)
+
+Train Epoch: 153   	 Loss: 0.312867	  lr : 0.000712 
+Train Epoch: 153   	 Loss: 0.309173	  lr : 0.000624 
+Train Epoch: 153   	 Loss: 0.296682	  lr : 0.000537 
+Train Epoch: 153   	 Loss: 0.290169	  lr : 0.000449 
+
+Test set on 2018 : Accuracy: 26365.0/32000.0 (82.391%)
+
+
+Test set on 2022 : Accuracy: 26942.0/32000.0 (84.194%)
+
+Train Epoch: 154   	 Loss: 0.297809	  lr : 0.000274 
+Train Epoch: 154   	 Loss: 0.280008	  lr : 0.000187 
+Train Epoch: 154   	 Loss: 0.287922	  lr : 0.000101 
+Train Epoch: 154   	 Loss: 0.274852	  lr : 0.000188 
+
+Test set on 2018 : Accuracy: 26422.0/32000.0 (82.569%)
+
+
+Test set on 2022 : Accuracy: 27331.0/32000.0 (85.409%)
+
+Train Epoch: 155   	 Loss: 0.283494	  lr : 0.000363 
+Train Epoch: 155   	 Loss: 0.287729	  lr : 0.000451 
+Train Epoch: 155   	 Loss: 0.296615	  lr : 0.000538 
+Train Epoch: 155   	 Loss: 0.299330	  lr : 0.000626 
+
+Test set on 2018 : Accuracy: 26372.0/32000.0 (82.412%)
+
+
+Test set on 2022 : Accuracy: 27159.0/32000.0 (84.872%)
+
+Train Epoch: 156   	 Loss: 0.303115	  lr : 0.000799 
+Train Epoch: 156   	 Loss: 0.315068	  lr : 0.000712 
+Train Epoch: 156   	 Loss: 0.304772	  lr : 0.000624 
+Train Epoch: 156   	 Loss: 0.297711	  lr : 0.000537 
+
+Test set on 2018 : Accuracy: 26209.0/32000.0 (81.903%)
+
+
+Test set on 2022 : Accuracy: 26764.0/32000.0 (83.638%)
+
+Train Epoch: 157   	 Loss: 0.293430	  lr : 0.000362 
+Train Epoch: 157   	 Loss: 0.285494	  lr : 0.000274 
+Train Epoch: 157   	 Loss: 0.285421	  lr : 0.000187 
+Train Epoch: 157   	 Loss: 0.282785	  lr : 0.000101 
+
+Test set on 2018 : Accuracy: 26246.0/32000.0 (82.019%)
+
+
+Test set on 2022 : Accuracy: 27479.0/32000.0 (85.872%)
+
+Train Epoch: 158   	 Loss: 0.283248	  lr : 0.000276 
+Train Epoch: 158   	 Loss: 0.289737	  lr : 0.000363 
+Train Epoch: 158   	 Loss: 0.283773	  lr : 0.000451 
+Train Epoch: 158   	 Loss: 0.288509	  lr : 0.000538 
+
+Test set on 2018 : Accuracy: 25859.0/32000.0 (80.809%)
+
+
+Test set on 2022 : Accuracy: 27349.0/32000.0 (85.466%)
+
+Train Epoch: 159   	 Loss: 0.309364	  lr : 0.000713 
+Train Epoch: 159   	 Loss: 0.308366	  lr : 0.000799 
+Train Epoch: 159   	 Loss: 0.296058	  lr : 0.000712 
+Train Epoch: 159   	 Loss: 0.302306	  lr : 0.000624 
+
+Test set on 2018 : Accuracy: 26305.0/32000.0 (82.203%)
+
+
+Test set on 2022 : Accuracy: 27351.0/32000.0 (85.472%)
+
+Train Epoch: 160   	 Loss: 0.298685	  lr : 0.000449 
+Train Epoch: 160   	 Loss: 0.295238	  lr : 0.000362 
+Train Epoch: 160   	 Loss: 0.283392	  lr : 0.000274 
+Train Epoch: 160   	 Loss: 0.288258	  lr : 0.000187 
+
+Test set on 2018 : Accuracy: 26220.0/32000.0 (81.938%)
+
+
+Test set on 2022 : Accuracy: 27541.0/32000.0 (86.066%)
+
+########################### Saved 2022 best model. the highest Accuracy on 2022 :0.86066
+DONE..

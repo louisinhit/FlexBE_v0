@@ -1,0 +1,13 @@
+python3 run_tasks.py --model mlp \
+ 					 --task modulation \
+					 --cuda 0 \
+					 --train_set 2018 \
+ 					 --is_butterfly \
+       				 --channel 4 \
+					 --transformer_dim 32 \
+                     --transformer_hidden_dim 32 \
+					 --pool_type max \
+                     --pool_stride 8 \
+					 --num_layers 3 \
+					 --boi_thre 14.0 \
+					 --noise_max 0.3
